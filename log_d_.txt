@@ -1,0 +1,29 @@
+trainable parameters: 60trainable parameters: 15trainable parameters: 15trainable parameters: 15trainable parameters: 15trainable parameters: 15epoch: 0 mean: 5.0 best: 5.0 worst: 5.0 std.: 0.0
+epoch: 1 mean: 5.0 best: 5.0 worst: 5.0 std.: 0.0
+epoch: 2 mean: 5.0 best: 5.0 worst: 5.0 std.: 0.0
+epoch: 3 mean: 5.0 best: 5.0 worst: 5.0 std.: 0.0
+epoch: 4 mean: 5.0 best: 5.0 worst: 5.0 std.: 0.0
+trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880trainable parameters: 4160trainable parameters: 4160trainable parameters: 4160trainable parameters: 4160trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880epoch: 0 mean: -0.061232179403305054 best: -0.059335894882678986 worst: -0.06312846392393112 std.: 0.0018962845206260681
+trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880trainable parameters: 10880epoch: 0 mean: -0.05396121367812157 best: -0.05387534946203232 worst: -0.054047077894210815 std.: 8.586421608924866e-05
+trainable parameters: 10880trainable parameters: 10880trainable parameters: 2880epoch: 0 mean: 0.32642938755452633 best: 0.7645699977874756 worst: -0.12623929977416992 std.: 0.3638907655571861
+trainable parameters: 2880epoch: 0 mean: -0.043711138516664506 best: 0.34138041734695435 worst: -0.4797862768173218 std.: 0.2578882755108293
+trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880epoch: 0 mean: -0.14169138250872493 best: 0.06479527056217194 worst: -0.37244877219200134 std.: 0.18782477518291418
+epoch: 1 mean: -0.03387980302795768 best: 0.05191893130540848 worst: -0.11149698495864868 std.: 0.0745210998309768
+epoch: 2 mean: -0.139551205560565 best: 0.11941548436880112 worst: -0.36234816908836365 std.: 0.1714028818105976
+epoch: 3 mean: 0.11041379161179066 best: 0.248640775680542 worst: -0.06381502747535706 std.: 0.11197669421897564
+epoch: 4 mean: 0.0013161413371562958 best: 0.43779250979423523 worst: -0.3125201165676117 std.: 0.3089748270003457
+epoch: 5 mean: -0.24509614519774914 best: 0.021723084151744843 worst: -0.6788675785064697 std.: 0.26416273003866625
+trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 2880epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 2880epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 2880trainable parameters: 2880trainable parameters: 2880trainable parameters: 4160trainable parameters: 4160trainable parameters: 4160trainable parameters: 4160trainable parameters: 4160trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 380trainable parameters: 380epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 380epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 380epoch: 0 mean: 0.0 best: 0.0 worst: 0.0 std.: 0.0
+trainable parameters: 380trainable parameters: 690trainable parameters: 690epoch: 0 mean: 196.3839658591149 best: 229.75468909684608 worst: 186.5912882942112 std.: 11.744558413293719
+trainable parameters: 690trainable parameters: 690trainable parameters: 690trainable parameters: 690trainable parameters: 690epoch: 0 mean: 192.8620632950733 best: 194.72897944267305 worst: 190.99514714747357 std.: 1.8669161475997385
+trainable parameters: 690epoch: 0 mean: 197.74492911807891 best: 197.74492911807891 worst: 197.74492911807891 std.: 0.0
+trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380trainable parameters: 380
