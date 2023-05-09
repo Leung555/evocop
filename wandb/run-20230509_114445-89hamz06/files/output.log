@@ -1,0 +1,11 @@
+initial_time 26692.231418684
+trainable parameters:  18880
+start_time 26692.236301152
+TEST
+epoch 0 mean 0.10223867744207382 best 0.2904977798461914
+running time per epoch:  23.95187449900186
+start_time 26716.188478675
+TEST
+epoch 1 mean -0.16762525215744972 best -0.10157831758260727
+saving..
+running time per epoch:  25.074122635000094

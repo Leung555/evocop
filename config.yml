@@ -1,0 +1,51 @@
+# config file for parameters of dbAlpha_hebb
+
+# CPU
+Device:
+  CPU_NUM: 8
+  TASK_PER_IND: 1
+  
+# Simulation Environments
+ENV:
+  NAME: 'scene_dbAlpha_test'
+  HEADLESS: False
+
+# ES algorithm
+ES_params:
+  POPSIZE: 2
+  EPISODE_LENGTH: 200
+  REWARD_FUNC: 'abs_y_distance'
+  rank_fitness: True
+  antithetic: True
+  learning_rate: 0.01
+  learning_rate_decay: 0.9999
+  sigma_init: 0.1
+  sigma_decay: 0.999
+  learning_rate_limit: 0.001
+  sigma_limit: 0.01
+
+# Training Params
+Train_params:
+  EPOCH: 1
+  EVAL_EVERY: 2
+  SAVE_EVERY: 1
+
+# Model
+Model:
+  # input: joint angles (18 joints)
+  # Hidden layer 
+  # output: joint angles (18 joints)]
+
+  input: 
+    J_pos: 18
+  output: 
+    J_pos: 18
+  ARCHITECTURE: 
+    name: 'hebb' # 'FeedForward'
+    size: [18, 64, 32, 18]
+
+
+# WanDB Data Logging
+Wandb_log:
+  use_WanDB: False
+  project_name: 'dbAlpha_wandb_log'

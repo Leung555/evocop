@@ -5,7 +5,8 @@ from hebbian_neural_net import HebbianNet
 from os.path import dirname, join, abspath
 from dbAlphaEnv import dbAlphaEnv
 
-def fitness(net: HebbianNet, env_name: str, episode_length: int) -> float:
+def fitness(net: HebbianNet, env_name: str, 
+            episode_length: int, reward_function: str) -> float:
     # print(env_name)
     env = dbAlphaEnv(env_name)
     env.start()
@@ -32,7 +33,8 @@ def fitness(net: HebbianNet, env_name: str, episode_length: int) -> float:
         counter += 1
         if counter > episode_length:
             done = True
-    r_tot = robot_pos[1]
+    if reward_function == 'abs_y_distance':
+        r_tot = robot_pos[1]
     # env.stop_simulation()
     env.shutdown()
     # print('---shutdown simulation---')

@@ -15,16 +15,17 @@ from pyrep.robots.legged_robots.dbAlpha import dbAlpha
 from pyrep.objects.shape import Shape
 import numpy as np
 import time
-
-SCENE_FILE = join(dirname(abspath(__file__)),
-                './scenes/scene_dbAlpha_newtest.ttt')
-
+import yaml
+# open config files for reading prams
+with open('config.yml', 'r') as file:
+    configs = yaml.safe_load(file)
 class dbAlphaEnv(object):
 
     def __init__(self, scenefile):
         self.pr = PyRep()
-        # print(self.scene_file)
-        self.pr.launch(SCENE_FILE, headless=True)
+        SCENE_FILE = join(dirname(abspath(__file__)),
+                './scenes/'+scenefile+'.ttt')        # print(self.scene_file)
+        self.pr.launch(SCENE_FILE, headless=configs['ENV']['HEADLESS'])
         # print("launch sim")
         self.pr.start()
         self.agent = dbAlpha()

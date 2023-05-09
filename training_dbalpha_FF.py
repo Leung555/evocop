@@ -162,7 +162,7 @@ for run in runs:
                 copy.deepcopy(init_net),
                 pop_mean_curve,
                 best_sol_curve,
-                ), open(str(run)+'_' + str(len(init_params)) + str(epoch) + '_' + str(pop_mean_curve[epoch]) + '.pickle', 'wb'))
+                ), open('data/model/'+str(run)+'_' + str(len(init_params)) + str(epoch) + '_' + str(pop_mean_curve[epoch]) + '.pickle', 'wb'))
 
         # '''
 
