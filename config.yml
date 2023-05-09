@@ -32,17 +32,22 @@ Train_params:
 
 # Model
 Model:
-  # input: joint angles (18 joints)
-  # Hidden layer 
-  # output: joint angles (18 joints)]
-
-  input: 
-    J_pos: 18
-  output: 
-    J_pos: 18
-  ARCHITECTURE: 
-    name: 'hebb' # 'FeedForward'
-    size: [18, 64, 32, 18]
+  FEEDFORWARD:
+    input: 
+      J_pos: 18
+    output: 
+      J_pos: 18
+    ARCHITECTURE: 
+      name: 'FeedForward' # 'FeedForward'
+      size: [18, 64, 32, 18]
+  HEBB:
+    input: 
+      J_pos: 18
+    output: 
+      J_pos: 18
+    ARCHITECTURE: 
+      name: 'hebb' # 'FeedForward'
+      size: [18, 64, 32, 18]
 
 
 # WanDB Data Logging

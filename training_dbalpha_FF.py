@@ -40,13 +40,13 @@ from pyrep import PyRep
 from pyrep.robots.legged_robots.dbAlpha import dbAlpha
 from pyrep.objects.shape import Shape
 import numpy as np
-import time
+import timeit
 import random
 from multiprocessing import Process
+from multiprocessing import Pool
 
 # Lib for Evolutional strategy algorithm
 from feedforward_neural_net import FeedForwardNet
-# from hebbian_neural_net import HebbianNet
 from ES_classes import OpenES
 from rollout import fitness
 
@@ -60,40 +60,58 @@ import numpy as np
 import yaml
 import wandb
 
-# scene file destination
-SCENE_FILE = join(dirname(abspath(__file__)),
-                  './scenes/scene_dbAlpha.ttt')
-ENV_NAME = 'dbAlpha'
 
-# ES parameters configuration
-EPISODES = 2
-EPISODE_LENGTH = 100
-
-# initiate Coppeliasim simulation
-# pr = PyRep()
-# pr.launch(SCENE_FILE, headless=False)
-# agent = dbAlpha()
-# PROCESSES = 5
-
-# ARCHITECTURE
-inp_size = 18 # joint angles (18 joints)
-action_size = 18 # joint angles (18 joints)
-hidden_neuron_num1 = 18
-hidden_neuron_num2 = 18
-
-ARCHITECTURE = [inp_size, 
-                hidden_neuron_num1, 
-                hidden_neuron_num2, 
-                action_size]
+# open config files for reading prams
+with open('config.yml', 'r') as file:
+    configs = yaml.safe_load(file)
 
 # CPU cores for training 
-cpus = 6
+cpus = configs['Device']['CPU_NUM']
+TASK_PER_IND = configs['Device']['TASK_PER_IND']
+
+# ES parameters configuration
+POPSIZE             = configs['ES_params']['POPSIZE']
+EPISODE_LENGTH      = configs['ES_params']['EPISODE_LENGTH']
+REWARD_FUNCTION     = configs['ES_params']['REWARD_FUNC']
+RANK_FITNESS        = configs['ES_params']['rank_fitness']
+ANTITHETIC          = configs['ES_params']['antithetic']
+LEARNING_RATE       = configs['ES_params']['learning_rate']
+LEARNING_RATE_DECAY = configs['ES_params']['learning_rate_decay']
+SIGMA_INIT          = configs['ES_params']['sigma_init']
+SIGMA_DECAY         = configs['ES_params']['sigma_decay']
+LEARNING_RATE_LIMIT = configs['ES_params']['learning_rate_limit']
+SIGMA_LIMIT         = configs['ES_params']['sigma_limit']
 
 # Training parameters
-EPOCHS = 1
-TASK_PER_IND = 1
-EVAL_EVERY = 2
-popsize = 2
+EPOCHS = configs['Train_params']['EPOCH']
+EVAL_EVERY = configs['Train_params']['EVAL_EVERY']
+SAVE_EVERY = configs['Train_params']['SAVE_EVERY']
+
+# Model
+ARCHITECTURE_NAME = configs['Model']['FEEDFORWARD']['ARCHITECTURE']['name']
+ARCHITECTURE = configs['Model']['FEEDFORWARD']['ARCHITECTURE']['size']
+
+# scene file destination
+ENV_NAME = configs['ENV']['NAME']
+
+# WanDB Log
+use_Wandb = configs['Wandb_log']['use_WanDB']
+config_wandb = configs
+
+if use_Wandb:
+    wandb.init(project='dbAlpha_wandb_log', 
+           config=config_wandb)
+
+print("CPU_num: ", cpus)
+print("POPSIZE: ", POPSIZE)
+print("EPISODE_LENGTH: ", EPISODE_LENGTH)
+print("REWARD_FUNCTION: ", REWARD_FUNCTION)
+print("ARCHITECTURE_NAME: ", ARCHITECTURE_NAME)
+print("ARCHITECTURE_size: ", ARCHITECTURE)
+print("ENV_NAME: ", ENV_NAME)
+
+initial_time = timeit.default_timer()
+print("initial_time", initial_time)
 
 runs = ['d_']
 for run in runs:
@@ -108,15 +126,15 @@ for run in runs:
         outfile.write('trainable parameters: ' + str(len(init_params)))
 
     solver = OpenES(len(init_params),
-                    popsize=popsize,
-                    rank_fitness=True,
-                    antithetic=True,
-                    learning_rate=0.01,
-                    learning_rate_decay=0.9999,
-                    sigma_init=0.1,
-                    sigma_decay=0.999,
-                    learning_rate_limit=0.001,
-                    sigma_limit=0.01)
+                    popsize=POPSIZE,
+                    rank_fitness=RANK_FITNESS,
+                    antithetic=ANTITHETIC,
+                    learning_rate=LEARNING_RATE,
+                    learning_rate_decay=LEARNING_RATE_DECAY,
+                    sigma_init=SIGMA_INIT,
+                    sigma_decay=SIGMA_DECAY,
+                    learning_rate_limit=LEARNING_RATE_LIMIT,
+                    sigma_limit=SIGMA_LIMIT)
     solver.set_mu(init_params)
 
     def worker_fn(params):
@@ -124,20 +142,29 @@ for run in runs:
         for epi in range(TASK_PER_IND):
             net = FeedForwardNet(ARCHITECTURE)
             net.set_params(params)
-            mean += fitness(net, ENV_NAME, EPISODE_LENGTH) 
+            mean += fitness(net, ENV_NAME, EPISODE_LENGTH, REWARD_FUNCTION) 
         return mean/TASK_PER_IND
     
     pop_mean_curve = np.zeros(EPOCHS)
     best_sol_curve = np.zeros(EPOCHS)
     eval_curve = np.zeros(EPOCHS)
 
+
     for epoch in range(EPOCHS):
+        start_time = timeit.default_timer()
+        print("start_time", start_time)
 
         solutions = solver.ask()
 
         with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
             fitlist = executor.map(worker_fn, [params for params in solutions])
+        # with Pool(cpus) as p:
+        #     fitlist = p.map(worker_fn, [params for params in solutions])
 
+        # processes = [Process(target=worker_fn, args=[params for params in solutions]) for i in len(solutions)]
+        # [p.start() for p in processes]
+        # [p.join() for p in processes]
+        
         fitlist = list(fitlist)
         solver.tell(fitlist)
 
@@ -154,15 +181,27 @@ for run in runs:
         pop_mean_curve[epoch] = fit_arr.mean()
         best_sol_curve[epoch] = fit_arr.max()
 
+        # WanDB Log data -------------------------------
+        if use_Wandb:
+            wandb.log({"epoch": epoch,
+                        "mean" : np.mean(fitlist),
+                        "best" : np.max(fitlist),
+                        "worst": np.min(fitlist),
+                        "std"  : np.std(fitlist),
+                        })
+        # -----------------------------------------------
         # '''
-        if (epoch + 1) % 500 == 0:
+        if (epoch + 1) % SAVE_EVERY == 0:
             print('saving..')
             pickle.dump((
                 solver,
                 copy.deepcopy(init_net),
                 pop_mean_curve,
                 best_sol_curve,
-                ), open('data/model/'+str(run)+'_' + str(len(init_params)) + str(epoch) + '_' + str(pop_mean_curve[epoch]) + '.pickle', 'wb'))
+                ), open('data/model/FF'+str(run)+'_' + str(len(init_params)) + str(epoch) + '_' + str(pop_mean_curve[epoch]) + '.pickle', 'wb'))
+        
+        stop_time = timeit.default_timer()
+        print("running time per epoch: ", stop_time-start_time)
 
         # '''
 
@@ -171,3 +210,25 @@ for run in runs:
     
      
 # ------------- end training episode --------------#
+
+
+# # Do some stuff
+# for e in range(EPISODES):
+#     # start simulation
+#     pr.start()
+
+#     print('Starting episode %d' % e)
+
+#     for i in range(EPISODE_LENGTH):
+#         print("episode: {}", e)
+#         print("step:    {}", i)
+#         pr.step()
+#         # replay_buffer.append((state, action, reward, next_state))
+#         # state = next_state
+#         # agent.learn(replay_buffer)
+
+#     # stop simulation
+#     pr.stop()
+
+# pr.stop()
+# pr.shutdown()

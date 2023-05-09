@@ -88,7 +88,8 @@ EVAL_EVERY = configs['Train_params']['EVAL_EVERY']
 SAVE_EVERY = configs['Train_params']['SAVE_EVERY']
 
 # Model
-ARCHITECTURE = configs['Model']['ARCHITECTURE']['size']
+ARCHITECTURE_NAME = configs['Model']['HEBB']['ARCHITECTURE']['name']
+ARCHITECTURE = configs['Model']['HEBB']['ARCHITECTURE']['size']
 
 # scene file destination
 ENV_NAME = configs['ENV']['NAME']
@@ -100,6 +101,14 @@ config_wandb = configs
 if use_Wandb:
     wandb.init(project='dbAlpha_wandb_log', 
            config=config_wandb)
+
+print("CPU_num: ", cpus)
+print("POPSIZE: ", POPSIZE)
+print("EPISODE_LENGTH: ", EPISODE_LENGTH)
+print("REWARD_FUNCTION: ", REWARD_FUNCTION)
+print("ARCHITECTURE_NAME: ", ARCHITECTURE_NAME)
+print("ARCHITECTURE_size: ", ARCHITECTURE)
+print("ENV_NAME: ", ENV_NAME)
 
 initial_time = timeit.default_timer()
 print("initial_time", initial_time)
