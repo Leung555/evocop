@@ -1,0 +1,27 @@
+2023-05-09 10:03:26,211 INFO    MainThread:128332 [wandb_setup.py:_flush():76] Configure stats pid to 128332
+2023-05-09 10:03:26,211 INFO    MainThread:128332 [wandb_setup.py:_flush():76] Loading settings from /home/binggwong/.config/wandb/settings
+2023-05-09 10:03:26,211 INFO    MainThread:128332 [wandb_setup.py:_flush():76] Loading settings from /home/binggwong/git/dbAlpha_hebb/wandb/settings
+2023-05-09 10:03:26,211 INFO    MainThread:128332 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-09 10:03:26,212 INFO    MainThread:128332 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-09 10:03:26,212 INFO    MainThread:128332 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'training_dbalpha.py', 'program': '/home/binggwong/git/dbAlpha_hebb/training_dbalpha.py'}
+2023-05-09 10:03:26,212 INFO    MainThread:128332 [wandb_init.py:_log_setup():507] Logging user logs to /home/binggwong/git/dbAlpha_hebb/wandb/run-20230509_100326-t6q72v14/logs/debug.log
+2023-05-09 10:03:26,213 INFO    MainThread:128332 [wandb_init.py:_log_setup():508] Logging internal logs to /home/binggwong/git/dbAlpha_hebb/wandb/run-20230509_100326-t6q72v14/logs/debug-internal.log
+2023-05-09 10:03:26,213 INFO    MainThread:128332 [wandb_init.py:init():547] calling init triggers
+2023-05-09 10:03:26,213 INFO    MainThread:128332 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'inp_size': 18, 'action_size': 18, 'hidden_neuron_num1': 64, 'hidden_neuron_num2': 32}
+2023-05-09 10:03:26,213 INFO    MainThread:128332 [wandb_init.py:init():595] starting backend
+2023-05-09 10:03:26,214 INFO    MainThread:128332 [wandb_init.py:init():599] setting up manager
+2023-05-09 10:03:26,219 INFO    MainThread:128332 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-09 10:03:26,224 INFO    MainThread:128332 [wandb_init.py:init():605] backend started and connected
+2023-05-09 10:03:26,229 INFO    MainThread:128332 [wandb_init.py:init():695] updated telemetry
+2023-05-09 10:03:26,242 INFO    MainThread:128332 [wandb_init.py:init():732] communicating run to backend with 60.0 second timeout
+2023-05-09 10:03:27,452 INFO    MainThread:128332 [wandb_run.py:_on_init():2176] communicating current version
+2023-05-09 10:03:27,626 INFO    MainThread:128332 [wandb_run.py:_on_init():2185] got version response upgrade_message: "wandb version 0.15.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-05-09 10:03:27,626 INFO    MainThread:128332 [wandb_init.py:init():782] starting run threads in backend
+2023-05-09 10:03:27,694 INFO    MainThread:128332 [wandb_run.py:_console_start():2157] atexit reg
+2023-05-09 10:03:27,694 INFO    MainThread:128332 [wandb_run.py:_redirect():2012] redirect: SettingsConsole.WRAP_RAW
+2023-05-09 10:03:27,694 INFO    MainThread:128332 [wandb_run.py:_redirect():2077] Wrapping output streams.
+2023-05-09 10:03:27,694 INFO    MainThread:128332 [wandb_run.py:_redirect():2102] Redirects installed.
+2023-05-09 10:03:27,695 INFO    MainThread:128332 [wandb_init.py:init():824] run started, returning control to user process
+2023-05-09 10:08:16,489 WARNING MsgRouterThr:128332 [router.py:message_loop():77] message_loop has been closed

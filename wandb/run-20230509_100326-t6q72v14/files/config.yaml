@@ -1,0 +1,37 @@
+wandb_version: 1
+
+inp_size:
+  desc: null
+  value: 18
+action_size:
+  desc: null
+  value: 18
+hidden_neuron_num1:
+  desc: null
+  value: 64
+hidden_neuron_num2:
+  desc: null
+  value: 32
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.6
+    cli_version: 0.15.0
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1683619406.2256
+    t:
+      1:
+      - 1
+      - 55
+      2:
+      - 1
+      - 55
+      3:
+      - 16
+      - 23
+      4: 3.10.6
+      5: 0.15.0
+      8:
+      - 5

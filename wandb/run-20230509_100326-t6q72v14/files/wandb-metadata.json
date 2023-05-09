@@ -1,0 +1,85 @@
+{
+    "os": "Linux-5.19.0-41-generic-x86_64-with-glibc2.35",
+    "python": "3.10.6",
+    "heartbeatAt": "2023-05-09T08:03:27.665108",
+    "startedAt": "2023-05-09T08:03:26.205717",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/binggwong/git/dbAlpha_hebb/training_dbalpha.py",
+    "codePath": "training_dbalpha.py",
+    "git": {
+        "remote": "https://github.com/Leung555/dbAlpha_hebb.git",
+        "commit": "29f658d5135e817df1948c4e75deeb0e33ca31a1"
+    },
+    "email": "binggwong@gmail.com",
+    "root": "/home/binggwong/git/dbAlpha_hebb",
+    "host": "binggwong-XPS-15-9560",
+    "username": "binggwong",
+    "executable": "/home/binggwong/hebbian/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1700.1126249999998,
+        "min": 800.0,
+        "max": 3800.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.005,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1699.994,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1700.136,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1700.572,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1699.979,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1699.655,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1700.047,
+            "min": 800.0,
+            "max": 3800.0
+        },
+        {
+            "current": 1700.04,
+            "min": 800.0,
+            "max": 3800.0
+        }
+    ],
+    "disk": {
+        "total": 279.97347259521484,
+        "used": 118.38623428344727
+    },
+    "gpu": "NVIDIA GeForce GTX 1050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1050",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.47787857055664
+    }
+}

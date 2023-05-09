@@ -24,7 +24,7 @@ class dbAlphaEnv(object):
     def __init__(self, scenefile):
         self.pr = PyRep()
         # print(self.scene_file)
-        self.pr.launch(SCENE_FILE, headless=False)
+        self.pr.launch(SCENE_FILE, headless=True)
         # print("launch sim")
         self.pr.start()
         self.agent = dbAlpha()

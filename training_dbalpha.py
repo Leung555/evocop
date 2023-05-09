@@ -40,7 +40,7 @@ from pyrep import PyRep
 from pyrep.robots.legged_robots.dbAlpha import dbAlpha
 from pyrep.objects.shape import Shape
 import numpy as np
-import time
+import timeit
 import random
 from multiprocessing import Process
 from multiprocessing import Pool
@@ -67,7 +67,7 @@ ENV_NAME = 'dbAlpha'
 
 # ES parameters configuration
 EPISODES = 2
-EPISODE_LENGTH = 500
+EPISODE_LENGTH = 300
 
 # initiate Coppeliasim simulation
 # pr = PyRep()
@@ -78,8 +78,8 @@ EPISODE_LENGTH = 500
 # ARCHITECTURE
 inp_size = 18 # joint angles (18 joints)
 action_size = 18 # joint angles (18 joints)
-hidden_neuron_num1 = 2
-hidden_neuron_num2 = 2
+hidden_neuron_num1 = 64
+hidden_neuron_num2 = 32
 
 ARCHITECTURE = [inp_size, 
                 hidden_neuron_num1, 
@@ -87,13 +87,29 @@ ARCHITECTURE = [inp_size,
                 action_size]
 
 # CPU cores for training 
-cpus = 6
+cpus = 8
 
 # Training parameters
-EPOCHS = 1
+EPOCHS = 5
 TASK_PER_IND = 1
-EVAL_EVERY = 2
-popsize = 2
+EVAL_EVERY = 3
+popsize = 10
+SAVE_EVERY = 2
+
+# WanDB Log
+Wandb_data_collect = True
+config_wandb = {
+    "inp_size" : inp_size, # joint angles (18 joints)
+    "action_size" : action_size, # joint angles (18 joints)
+    "hidden_neuron_num1" : hidden_neuron_num1,
+    "hidden_neuron_num2" : hidden_neuron_num2,
+}
+
+wandb.init(project='dbAlpha_wandb_log', 
+           config=config_wandb)
+
+initial_time = timeit.default_timer()
+print("initial_time", initial_time)
 
 runs = ['d_']
 for run in runs:
@@ -131,7 +147,10 @@ for run in runs:
     best_sol_curve = np.zeros(EPOCHS)
     eval_curve = np.zeros(EPOCHS)
 
+
     for epoch in range(EPOCHS):
+        start_time = timeit.default_timer()
+        print("start_time", start_time)
 
         solutions = solver.ask()
 
@@ -161,8 +180,16 @@ for run in runs:
         pop_mean_curve[epoch] = fit_arr.mean()
         best_sol_curve[epoch] = fit_arr.max()
 
+        # WanDB Log data -------------------------------
+        wandb.log({"epoch": epoch,
+                    "mean" : np.mean(fitlist),
+                    "best" : np.max(fitlist),
+                    "worst": np.min(fitlist),
+                    "std"  : np.std(fitlist),
+                    })
+        # -----------------------------------------------
         # '''
-        if (epoch + 1) % 500 == 0:
+        if (epoch + 1) % SAVE_EVERY == 0:
             print('saving..')
             pickle.dump((
                 solver,
@@ -170,6 +197,9 @@ for run in runs:
                 pop_mean_curve,
                 best_sol_curve,
                 ), open(str(run)+'_' + str(len(init_params)) + str(epoch) + '_' + str(pop_mean_curve[epoch]) + '.pickle', 'wb'))
+        
+        stop_time = timeit.default_timer()
+        print("running time per epoch: ", stop_time-start_time)
 
         # '''
 
