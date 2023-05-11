@@ -39,6 +39,7 @@ from os.path import dirname, join, abspath
 from os import listdir
 from pyrep import PyRep
 from pyrep.robots.legged_robots.dbAlpha import dbAlpha
+from dbAlphaEnv import dbAlphaEnv
 from pyrep.objects.shape import Shape
 import numpy as np
 import timeit
@@ -116,6 +117,14 @@ initial_time = timeit.default_timer()
 print("initial_time", initial_time)
 
 runs = ['d_']
+
+dbAlpha_env = [None]*cpus
+for i in range(cpus):
+    dbAlpha_env[i] = dbAlphaEnv(ENV_NAME)
+    dbAlpha_env[i].stop()
+    print('setup dbAlpha_env process: ', i)
+
+
 for run in runs:
 
     # Using weight result from previous training
@@ -123,8 +132,9 @@ for run in runs:
         dir_path = './data/model/'
         res = listdir(dir_path)
         trained_data = pickle.load(open('./data/model/'+res[-1], 'rb'))
-        trained_net = trained_data[0]
-        init_params = trained_net.best_mu
+        trained_net = trained_data[1]
+        print(trained_net)
+        init_params = trained_net.get_params()
 
     else:
         init_net = FeedForwardNet(ARCHITECTURE)
@@ -147,12 +157,41 @@ for run in runs:
                     sigma_limit=SIGMA_LIMIT)
     solver.set_mu(init_params)
 
-    def worker_fn(params):
+    def worker_fn(params, env_id):
         mean = 0
         for epi in range(TASK_PER_IND):
             net = FeedForwardNet(ARCHITECTURE)
             net.set_params(params)
-            mean += fitness(net, ENV_NAME, EPISODE_LENGTH, REWARD_FUNCTION) 
+            
+            obs = dbAlpha_env[env_id].reset()
+            done = False
+            r_tot = 0
+            counter = 0
+            while not done:
+                # print("step: ", counter)
+                
+                # Sensing
+                # joint_angles = np.array(env.agent.get_joint_positions())
+                # # print("joint_angles: ", joint_angles)
+                action = net.forward(obs)
+                robot_pos = dbAlpha_env.get_robot_position()
+                # print("action: ", action)
+                # print("robot_pos: ", robot_pos)
+
+                # obs, r, done, _ = env.step(action)
+                r, obs = dbAlpha_env.step(action)
+                # r_tot += r
+
+                counter += 1
+                if counter > EPISODE_LENGTH:
+                    done = True
+            if REWARD_FUNCTION == 'abs_y_distance':
+                r_tot = robot_pos[1]
+            # env.stop_simulation()
+            dbAlpha_env[env_id].stop()
+            # print('---shutdown simulation---')
+            return r_tot
+
         return mean/TASK_PER_IND
     
     pop_mean_curve = np.zeros(EPOCHS)
@@ -166,8 +205,12 @@ for run in runs:
 
         solutions = solver.ask()
 
-        with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
-            fitlist = executor.map(worker_fn, [params for params in solutions])
+        fitlist = np.zeros(POPSIZE)
+
+        for i in range(POPSIZE):
+            fitlist[i] = worker_fn(solutions[i], i%cpus)
+        # with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
+        #     fitlist = executor.map(worker_fn, [params for params in solutions])
         # with Pool(cpus) as p:
         #     fitlist = p.map(worker_fn, [params for params in solutions])
 

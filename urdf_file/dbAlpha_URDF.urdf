@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<robot name="dbAlpha__67__">
+    <link name="dbAlpha__67__">
+        <inertial>
+            <origin rpy="3.132095 3.952430 0.012524" xyz="-0.003596 -0.000050 -0.006148" />
+            <inertia izz="0.0012385454028845" iyy="0.0029571026097983" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.0032815174199641" />
+            <mass value="0.79117000102997" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_dbAlpha__67__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="dbAlpha_L2_link1__69__">
+        <inertial>
+            <origin rpy="0.211853 3.141575 -3.141564" xyz="-0.000001 -0.003483 -0.016764" />
+            <inertia izz="2.6206964321318e-05" iyy="4.4888296542922e-05" ixy="0.0" ixz="0.0" iyz="0.0" ixx="5.2499231969705e-05" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_dbAlpha_L2_link1__69__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_BC1__68__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="dbAlpha__67__" />
+        <child link="dbAlpha_L2_link1__69__" />
+        <origin rpy="-2.705419 3.124712 -0.000313" xyz="0.045783 0.043272 -0.020209" />
+    </joint>
+    <link name="Leg_Abdomen_MidRight_Link1__78__">
+        <inertial>
+            <origin rpy="0.211853 3.141575 -3.141564" xyz="-0.000001 -0.003483 -0.016764" />
+            <inertia izz="2.6206964321318e-05" iyy="4.4888296542922e-05" ixy="0.0" ixz="0.0" iyz="0.0" ixx="5.2499231969705e-05" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_MidRight_Link1__78__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_BC4__77__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="dbAlpha__67__" />
+        <child link="Leg_Abdomen_MidRight_Link1__78__" />
+        <origin rpy="2.705538 3.124781 -0.000433" xyz="0.044812 -0.043276 -0.020226" />
+    </joint>
+    <link name="Leg_Abdomen_RearLeft_Link1__87__">
+        <inertial>
+            <origin rpy="0.211853 3.141575 -3.141564" xyz="-0.000001 -0.003483 -0.016764" />
+            <inertia izz="2.6206964321318e-05" iyy="4.4888296542922e-05" ixy="0.0" ixz="0.0" iyz="0.0" ixx="5.2499231969705e-05" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_RearLeft_Link1__87__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_BC2__86__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="dbAlpha__67__" />
+        <child link="Leg_Abdomen_RearLeft_Link1__87__" />
+        <origin rpy="-2.356110 3.124561 -0.000014" xyz="-0.043207 0.052492 -0.080094" />
+    </joint>
+    <link name="Leg_Abdomen_RearRight_Link1__96__">
+        <inertial>
+            <origin rpy="0.211853 3.141575 -3.141564" xyz="-0.000001 -0.003483 -0.016764" />
+            <inertia izz="2.6206964321318e-05" iyy="4.4888296542922e-05" ixy="0.0" ixz="0.0" iyz="0.0" ixx="5.2499231969705e-05" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_RearRight_Link1__96__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_BC5__95__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="dbAlpha__67__" />
+        <child link="Leg_Abdomen_RearRight_Link1__96__" />
+        <origin rpy="2.356029 3.124609 -0.000337" xyz="-0.043270 -0.052463 -0.080090" />
+    </joint>
+    <link name="Thorax__105__">
+        <inertial>
+            <origin rpy="0.208316 2.478894 1.952964" xyz="-0.007045 -0.002621 0.004197" />
+            <inertia izz="0.00040412214002572" iyy="0.00077673274790868" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.00097328936681151" />
+            <mass value="0.39300000667572" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Thorax__105__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_TA__104__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="0.610865265131" velocity="6.2831854820251" lower="-0.17453292012215" effort="1000.0" />
+        <parent link="dbAlpha__67__" />
+        <child link="Thorax__105__" />
+        <origin rpy="0.873034 3.870867 -0.000143" xyz="0.122632 0.003233 0.099296" />
+    </joint>
+    <link name="dbAlpha_L2_link2__71__">
+        <inertial>
+            <origin rpy="-0.000207 3.042721 -0.000488" xyz="0.004974 0.000015 -0.042808" />
+            <inertia izz="5.4022199037718e-05" iyy="0.00066760997287929" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.000691102235578" />
+            <mass value="0.18299999833107" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_dbAlpha_L2_link2__71__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_CF1__70__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="dbAlpha_L2_link1__69__" />
+        <child link="dbAlpha_L2_link2__71__" />
+        <origin rpy="0.001406 4.600670 -1.572249" xyz="0.000012 -0.099006 -0.023672" />
+    </joint>
+    <link name="Leg_Abdomen_MidRight_Link2__80__">
+        <inertial>
+            <origin rpy="-0.000207 3.042721 -0.000488" xyz="0.004974 0.000015 -0.042808" />
+            <inertia izz="5.4022199037718e-05" iyy="0.00066760997287929" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.000691102235578" />
+            <mass value="0.18299999833107" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_MidRight_Link2__80__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_CF4__79__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Abdomen_MidRight_Link1__78__" />
+        <child link="Leg_Abdomen_MidRight_Link2__80__" />
+        <origin rpy="-0.000146 4.600979 1.571340" xyz="-0.000967 0.098989 -0.023820" />
+    </joint>
+    <link name="Leg_Abdomen_RearLeft_Link2__89__">
+        <inertial>
+            <origin rpy="-0.000207 3.042721 -0.000488" xyz="0.004974 0.000015 -0.042808" />
+            <inertia izz="5.4022199037718e-05" iyy="0.00066760997287929" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.000691102235578" />
+            <mass value="0.18299999833107" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_RearLeft_Link2__89__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_CF2__88__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Abdomen_RearLeft_Link1__87__" />
+        <child link="Leg_Abdomen_RearLeft_Link2__89__" />
+        <origin rpy="-0.002467 4.325249 -1.568185" xyz="0.000006 -0.095574 -0.000216" />
+    </joint>
+    <link name="Leg_Abdomen_RearRight_Link2__98__">
+        <inertial>
+            <origin rpy="-0.000207 3.042721 -0.000488" xyz="0.004974 0.000015 -0.042808" />
+            <inertia izz="5.4022199037718e-05" iyy="0.00066760997287929" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.000691102235578" />
+            <mass value="0.18299999833107" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_RearRight_Link2__98__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_CF5__97__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Abdomen_RearRight_Link1__96__" />
+        <child link="Leg_Abdomen_RearRight_Link2__98__" />
+        <origin rpy="0.002973 4.326993 1.568221" xyz="-0.000040 0.095655 -0.000460" />
+    </joint>
+    <link name="Leg_Thorax_Right_Link1__107__">
+        <inertial>
+            <origin rpy="0.211853 3.141575 -3.141564" xyz="-0.000001 -0.003483 -0.016764" />
+            <inertia izz="2.6206964321318e-05" iyy="4.4888296542922e-05" ixy="0.0" ixz="0.0" iyz="0.0" ixx="5.2499231969705e-05" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Thorax_Right_Link1__107__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_BC3__106__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Thorax__105__" />
+        <child link="Leg_Thorax_Right_Link1__107__" />
+        <origin rpy="-0.456070 2.380044 2.080914" xyz="-0.042815 -0.039849 0.035878" />
+    </joint>
+    <link name="Leg_Thorax_Left_Link1__116__">
+        <inertial>
+            <origin rpy="0.211853 3.141575 -3.141564" xyz="-0.000001 -0.003483 -0.016764" />
+            <inertia izz="2.6206964321318e-05" iyy="4.4888296542922e-05" ixy="0.0" ixz="0.0" iyz="0.0" ixx="5.2499231969705e-05" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Thorax_Left_Link1__116__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_BC0__115__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Thorax__105__" />
+        <child link="Leg_Thorax_Left_Link1__116__" />
+        <origin rpy="1.045196 2.615957 1.991392" xyz="-0.042818 0.023540 -0.039732" />
+    </joint>
+    <link name="dbAlpha_L2_link3__73__">
+        <inertial>
+            <origin rpy="3.141350 3.075489 -1.571388" xyz="-0.000007 0.013054 -0.016040" />
+            <inertia izz="4.6254976950877e-06" iyy="0.00011588189954637" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.0001162580010714" />
+            <mass value="0.034835413098335" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_dbAlpha_L2_link3__73__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_FT1__72__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="dbAlpha_L2_link2__71__" />
+        <child link="dbAlpha_L2_link3__73__" />
+        <origin rpy="1.246373 3.141611 -1.571527" xyz="-0.061323 0.000078 -0.131839" />
+    </joint>
+    <link name="Leg_Abdomen_MidRight_Link3__82__">
+        <inertial>
+            <origin rpy="3.141460 3.207698 -1.570422" xyz="-0.000007 -0.013048 -0.016041" />
+            <inertia izz="4.6254272092483e-06" iyy="0.00011588454071898" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.00011626073683146" />
+            <mass value="0.034835625439882" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_MidRight_Link3__82__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_FT4__81__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Abdomen_MidRight_Link2__80__" />
+        <child link="Leg_Abdomen_MidRight_Link3__82__" />
+        <origin rpy="-1.246260 3.141844 1.571598" xyz="-0.061257 -0.000092 -0.131888" />
+    </joint>
+    <link name="Leg_Abdomen_RearLeft_Link3__91__">
+        <inertial>
+            <origin rpy="3.140887 3.075536 -1.576638" xyz="-0.000015 0.013041 -0.016048" />
+            <inertia izz="4.6299360292323e-06" iyy="0.0001159082603408" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.00011628484207904" />
+            <mass value="0.034840602427721" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_RearLeft_Link3__91__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_FT2__90__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Abdomen_RearLeft_Link2__89__" />
+        <child link="Leg_Abdomen_RearLeft_Link3__91__" />
+        <origin rpy="1.434206 3.141771 -1.570393" xyz="-0.069473 0.000002 -0.117784" />
+    </joint>
+    <link name="Leg_Abdomen_RearRight_Link3__100__">
+        <inertial>
+            <origin rpy="0.000115 3.207858 1.566239" xyz="-0.000018 -0.013044 0.016049" />
+            <inertia izz="4.6300547182909e-06" iyy="0.00011591128713917" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.00011628799256869" />
+            <mass value="0.034841045737267" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Abdomen_RearRight_Link3__100__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_FT5__99__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Abdomen_RearRight_Link2__98__" />
+        <child link="Leg_Abdomen_RearRight_Link3__100__" />
+        <origin rpy="-1.708928 3.141515 -1.571681" xyz="-0.069085 0.000042 -0.117928" />
+    </joint>
+    <link name="Leg_Thorax_Right_Link2__109__">
+        <inertial>
+            <origin rpy="3.140945 3.228750 1.561417" xyz="-0.000110 -0.004829 -0.044410" />
+            <inertia izz="5.2986695664003e-05" iyy="0.00063820468494669" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.00066210451768711" />
+            <mass value="0.18000000715256" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Thorax_Right_Link2__109__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_CF3__108__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="0.0" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Thorax_Right_Link1__107__" />
+        <child link="Leg_Thorax_Right_Link2__109__" />
+        <origin rpy="-1.948993 3.151719 -3.138105" xyz="-0.000113 0.068892 0.000703" />
+    </joint>
+    <link name="Leg_Thorax_Left_Link2__118__">
+        <inertial>
+            <origin rpy="3.140945 3.228750 1.561417" xyz="-0.000110 -0.004829 -0.044410" />
+            <inertia izz="5.2986695664003e-05" iyy="0.00063820468494669" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.00066210451768711" />
+            <mass value="0.18000000715256" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Thorax_Left_Link2__118__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_CF0__117__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="0.0" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Thorax_Left_Link1__116__" />
+        <child link="Leg_Thorax_Left_Link2__118__" />
+        <origin rpy="1.948998 3.131741 -3.138359" xyz="0.000021 0.069250 -0.000879" />
+    </joint>
+    <link name="Leg_Thorax_Right_Link3__111__">
+        <inertial>
+            <origin rpy="3.141549 3.075404 -1.570455" xyz="-0.000004 0.013054 -0.016040" />
+            <inertia izz="4.6246409510786e-06" iyy="0.00011587604967644" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.00011625223123701" />
+            <mass value="0.034832794219255" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Thorax_Right_Link3__111__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_FT3__110__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Thorax_Right_Link2__109__" />
+        <child link="Leg_Thorax_Right_Link3__111__" />
+        <origin rpy="1.425362 3.140288 3.132235" xyz="0.000506 0.067885 -0.118216" />
+    </joint>
+    <link name="Leg_Thorax_Left_Link3__120__">
+        <inertial>
+            <origin rpy="3.141402 3.207528 -1.571267" xyz="-0.000013 -0.013050 -0.016040" />
+            <inertia izz="4.6254335757112e-06" iyy="0.0001158804006991" ixy="0.0" ixz="0.0" iyz="0.0" ixx="0.00011625634215306" />
+            <mass value="0.034834433346987" />
+        </inertial>
+        <collision>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="0.000000 0.000000 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/binggwong/git/dbAlpha_hebb/urdf_file/dbAlpha_URDF_Leg_Thorax_Left_Link3__120__.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlpha_FT0__119__" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit upper="1.5707963705063" velocity="6.2831854820251" lower="-1.5707963705063" effort="1000.0" />
+        <parent link="Leg_Thorax_Left_Link2__118__" />
+        <child link="Leg_Thorax_Left_Link3__120__" />
+        <origin rpy="1.716245 3.142494 3.131143" xyz="0.000565 0.067742 0.118391" />
+    </joint>
+</robot>

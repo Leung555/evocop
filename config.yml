@@ -2,7 +2,7 @@
 
 # CPU
 Device:
-  CPU_NUM:  8 # workstation (32 failed), DELL 8
+  CPU_NUM:  2 # workstation (32 failed), DELL 8
   TASK_PER_IND: 1
   
 # Simulation Environments
