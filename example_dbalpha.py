@@ -40,7 +40,7 @@ from pyrep import PyRep
 from pyrep.robots.legged_robots.dbAlpha import dbAlpha
 from pyrep.objects.shape import Shape
 import numpy as np
-import time
+import timeit
 import random
 from multiprocessing import Process
 
@@ -94,6 +94,10 @@ EVAL_EVERY = 2
 popsize = 2
 
 runs = ['d_']
+
+initial_time = timeit.default_timer()
+print("initial_time", initial_time)
+
 for run in runs:
 
     init_net = HebbianNet(ARCHITECTURE)
@@ -182,6 +186,8 @@ for run in runs:
     eval_curve = np.zeros(EPOCHS)
 
     for epoch in range(EPOCHS):
+        start_time = timeit.default_timer()
+        print("start_time", start_time)
 
         solutions = solver.ask()
 
@@ -215,6 +221,8 @@ for run in runs:
         #         ), open(str(run)+'_' + str(len(init_params)) + str(epoch) + '_' + str(pop_mean_curve[epoch]) + '.pickle', 'wb'))
 
         #'''
+        stop_time = timeit.default_timer()
+        print("running time per epoch: ", stop_time-start_time)
 
     # ------------- end training epoch --------------#
 
