@@ -123,9 +123,10 @@ for run in runs:
         dir_path = './data/model/'
         res = listdir(dir_path)
         trained_data = pickle.load(open('./data/model/'+res[-1], 'rb'))
-        trained_net = trained_data[0]
-        init_params = trained_net.best_mu
-
+        open_es_data = trained_data[0]
+        init_params = open_es_data.mu
+        init_net = FeedForwardNet(ARCHITECTURE)
+        init_net.set_params(init_params)
     else:
         init_net = FeedForwardNet(ARCHITECTURE)
         init_params = init_net.get_params()

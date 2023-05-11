@@ -36,6 +36,7 @@ This code is modified/based on "example_reinforcement_learning_env.ttt"
 """
 # libraries for simulation environment
 from os.path import dirname, join, abspath
+from os import listdir
 from pyrep import PyRep
 from pyrep.robots.legged_robots.dbAlpha import dbAlpha
 from pyrep.objects.shape import Shape
@@ -47,6 +48,7 @@ from multiprocessing import Pool
 
 # Lib for Evolutional strategy algorithm
 from hebbian_neural_net import HebbianNet
+from feedforward_neural_net import FeedForwardNet
 from ES_classes import OpenES
 from rollout import fitness
 
@@ -87,7 +89,7 @@ EVAL_EVERY = configs['Train_params']['EVAL_EVERY']
 SAVE_EVERY = configs['Train_params']['SAVE_EVERY']
 
 # Model
-ARCHITECTURE = configs['Model']['ARCHITECTURE']['size']
+ARCHITECTURE = configs['Model']['FEEDFORWARD']['ARCHITECTURE']['size']
 
 # scene file destination
 ENV_NAME = configs['ENV']['NAME']
@@ -104,12 +106,13 @@ initial_time = timeit.default_timer()
 print("initial_time", initial_time)
 
 
-data = pickle.load(open
-('./data/model/d__188800_-0.1839064359664917.pickle', 'rb'))
-
-network = data[1]
-network_params = network.get_params()
-
+dir_path = './data/model/'
+res = listdir(dir_path)
+trained_data = pickle.load(open('./data/model/'+res[-1], 'rb'))
+open_es_data = trained_data[0]
+init_params = open_es_data.mu
+# init_net = FeedForwardNet(ARCHITECTURE)
+# init_net.set_params(init_params)
 
 runs = ['e_']
 for run in runs:
@@ -136,7 +139,7 @@ for run in runs:
     def worker_fn(params):
         mean = 0
         for epi in range(TASK_PER_IND):
-            net = HebbianNet(ARCHITECTURE)
+            net = FeedForwardNet(ARCHITECTURE)
             net.set_params(params)
             mean += fitness(net, ENV_NAME, EPISODE_LENGTH, REWARD_FUNCTION) 
         return mean/TASK_PER_IND
@@ -151,10 +154,9 @@ for run in runs:
         print("start_time", start_time)
 
         # solutions = solver.ask()
-        network_params = network.get_params()
 
         with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
-            fitlist = executor.map(worker_fn, [params for params in [network_params]])
+            fitlist = executor.map(worker_fn, [params for params in [init_params]])
         
         fitlist = list(fitlist)
         # solver.tell(fitlist)

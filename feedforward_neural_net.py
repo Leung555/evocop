@@ -17,7 +17,7 @@ class FeedForwardNet:
         """
         sizes: [input_size, hid_1, ..., output_size]
         """
-        self.weights = [torch.Tensor(sizes[i], sizes[i + 1]).uniform_(-1,1) 
+        self.weights = [torch.Tensor(sizes[i], sizes[i + 1]).uniform_(-0.5,0.5) 
                         for i in range(len(sizes) - 1)]        
 
 
