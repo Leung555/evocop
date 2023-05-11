@@ -1,0 +1,89 @@
+CPU_num:  16
+POPSIZE:  500
+EPISODE_LENGTH:  200
+REWARD_FUNCTION:  abs_y_distance
+ARCHITECTURE_NAME:  FeedForward
+ARCHITECTURE_size:  [18, 64, 32, 18]
+ENV_NAME:  scene_dbAlpha_test
+initial_time 182142.328391146
+<feedforward_neural_net.FeedForwardNet object at 0x7ff0e93990f0>
+trainable parameters:  3776
+start_time 182142.351178833
+epoch 0 mean 0.1341228224784136 best 1.2888840436935425
+running time per epoch:  270.908246653009
+start_time 182413.260262896
+epoch 1 mean 0.10520468251249986 best 1.099075436592102
+running time per epoch:  271.393357560999
+start_time 182684.653858875
+epoch 2 mean 0.1275730039991031 best 1.5948704481124878
+running time per epoch:  271.5991249079816
+start_time 182956.253206593
+epoch 3 mean 0.1776106389972847 best 1.2464182376861572
+running time per epoch:  268.1906814049871
+start_time 183224.44444774
+epoch 4 mean 0.149750754607463 best 1.3248108625411987
+running time per epoch:  266.58438506297534
+start_time 183491.030027315
+epoch 5 mean 0.1513556972515362 best 1.7698217630386353
+running time per epoch:  268.22633114500786
+start_time 183759.25734542
+epoch 6 mean 0.1488874945794232 best 1.5927892923355103
+running time per epoch:  268.25203682502615
+start_time 184027.509770134
+epoch 7 mean 0.15679707165574655 best 1.4294987916946411
+running time per epoch:  268.35972963800305
+start_time 184295.87006553
+epoch 8 mean 0.18209605695470235 best 1.6522222757339478
+running time per epoch:  266.8147302150028
+start_time 184562.685102253
+epoch 9 mean 0.2096800823379308 best 1.517343282699585
+running time per epoch:  266.62543752099737
+start_time 184829.31274812
+epoch 10 mean 0.16631099717644976 best 1.3113534450531006
+running time per epoch:  267.05171197699383
+start_time 185096.366114493
+epoch 11 mean 0.20062235409393905 best 1.203230857849121
+running time per epoch:  266.627802108007
+start_time 185362.995254353
+epoch 12 mean 0.20091841167630628 best 1.3277455568313599
+running time per epoch:  267.1719189339783
+start_time 185630.168212875
+epoch 13 mean 0.21417850371822714 best 1.7083858251571655
+running time per epoch:  267.56946434199926
+start_time 185897.739122705
+epoch 14 mean 0.1762258166813408 best 1.3384381532669067
+running time per epoch:  265.2678738620016
+start_time 186163.010224791
+epoch 15 mean 0.22425008194916882 best 1.4259490966796875
+running time per epoch:  267.0736712079961
+start_time 186430.085074241
+epoch 16 mean 0.20772514911321924 best 1.6404269933700562
+running time per epoch:  268.1986118670029
+start_time 186698.284181438
+epoch 17 mean 0.2326165015171282 best 1.4636409282684326
+running time per epoch:  267.3109635550063
+start_time 186965.597231251
+epoch 18 mean 0.27499904811778103 best 1.6693065166473389
+running time per epoch:  266.6019754099834
+start_time 187232.200560451
+epoch 19 mean 0.23719511380454059 best 1.6287195682525635
+running time per epoch:  268.36662663001334
+start_time 187500.568387858
+epoch 20 mean 0.24643775605922566 best 1.5253466367721558
+running time per epoch:  267.0222357150051
+start_time 187767.590787827
+epoch 21 mean 0.29790403418091593 best 1.5198335647583008
+running time per epoch:  267.7075711090001
+start_time 188035.29962881
+Traceback (most recent call last):
+  File "/home/bile-itu/git/dbAlpha_hebb/training_dbalpha_FF.py", line 170, in <module>
+    with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 649, in __exit__
+    self.shutdown(wait=True)
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 775, in shutdown
+    self._executor_manager_thread.join()
+  File "/usr/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt

@@ -1,0 +1,27 @@
+2023-05-11 14:29:38,064 INFO    MainThread:3543094 [wandb_setup.py:_flush():76] Current SDK version is 0.15.2
+2023-05-11 14:29:38,064 INFO    MainThread:3543094 [wandb_setup.py:_flush():76] Configure stats pid to 3543094
+2023-05-11 14:29:38,065 INFO    MainThread:3543094 [wandb_setup.py:_flush():76] Loading settings from /home/bile-itu/.config/wandb/settings
+2023-05-11 14:29:38,065 INFO    MainThread:3543094 [wandb_setup.py:_flush():76] Loading settings from /home/bile-itu/git/dbAlpha_hebb/wandb/settings
+2023-05-11 14:29:38,065 INFO    MainThread:3543094 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-11 14:29:38,065 INFO    MainThread:3543094 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-11 14:29:38,065 INFO    MainThread:3543094 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'training_dbalpha_FF.py', 'program': '/home/bile-itu/git/dbAlpha_hebb/training_dbalpha_FF.py'}
+2023-05-11 14:29:38,065 INFO    MainThread:3543094 [wandb_init.py:_log_setup():507] Logging user logs to /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230511_142938-6380z7wi/logs/debug.log
+2023-05-11 14:29:38,066 INFO    MainThread:3543094 [wandb_init.py:_log_setup():508] Logging internal logs to /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230511_142938-6380z7wi/logs/debug-internal.log
+2023-05-11 14:29:38,066 INFO    MainThread:3543094 [wandb_init.py:init():547] calling init triggers
+2023-05-11 14:29:38,066 INFO    MainThread:3543094 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'Device': {'CPU_NUM': 16, 'TASK_PER_IND': 1}, 'ENV': {'NAME': 'scene_dbAlpha_test', 'HEADLESS': True}, 'ES_params': {'POPSIZE': 200, 'EPISODE_LENGTH': 200, 'REWARD_FUNC': 'abs_y_distance', 'rank_fitness': True, 'antithetic': True, 'learning_rate': 0.01, 'learning_rate_decay': 0.9999, 'sigma_init': 0.1, 'sigma_decay': 0.999, 'learning_rate_limit': 0.001, 'sigma_limit': 0.01}, 'Train_params': {'EPOCH': 101, 'EVAL_EVERY': 2, 'SAVE_EVERY': 50, 'USE_TRAIN_WEIGHT': True}, 'Model': {'FEEDFORWARD': {'input': {'J_pos': 18}, 'output': {'J_pos': 18}, 'ARCHITECTURE': {'name': 'FeedForward', 'size': [18, 64, 32, 18]}}, 'HEBB': {'input': {'J_pos': 18}, 'output': {'J_pos': 18}, 'ARCHITECTURE': {'name': 'hebb', 'size': [18, 64, 32, 18]}}}, 'Wandb_log': {'use_WanDB': True, 'project_name': 'dbAlpha_wandb_log'}}
+2023-05-11 14:29:38,067 INFO    MainThread:3543094 [wandb_init.py:init():596] starting backend
+2023-05-11 14:29:38,067 INFO    MainThread:3543094 [wandb_init.py:init():600] setting up manager
+2023-05-11 14:29:38,074 INFO    MainThread:3543094 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-11 14:29:38,081 INFO    MainThread:3543094 [wandb_init.py:init():606] backend started and connected
+2023-05-11 14:29:38,086 INFO    MainThread:3543094 [wandb_init.py:init():700] updated telemetry
+2023-05-11 14:29:38,096 INFO    MainThread:3543094 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2023-05-11 14:29:38,616 INFO    MainThread:3543094 [wandb_run.py:_on_init():2177] communicating current version
+2023-05-11 14:29:38,772 INFO    MainThread:3543094 [wandb_run.py:_on_init():2186] got version response 
+2023-05-11 14:29:38,772 INFO    MainThread:3543094 [wandb_init.py:init():787] starting run threads in backend
+2023-05-11 14:29:38,815 INFO    MainThread:3543094 [wandb_run.py:_console_start():2158] atexit reg
+2023-05-11 14:29:38,815 INFO    MainThread:3543094 [wandb_run.py:_redirect():2013] redirect: SettingsConsole.WRAP_RAW
+2023-05-11 14:29:38,815 INFO    MainThread:3543094 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2023-05-11 14:29:38,815 INFO    MainThread:3543094 [wandb_run.py:_redirect():2103] Redirects installed.
+2023-05-11 14:29:38,816 INFO    MainThread:3543094 [wandb_init.py:init():829] run started, returning control to user process
+2023-05-11 16:03:32,453 WARNING MsgRouterThr:3543094 [router.py:message_loop():77] message_loop has been closed

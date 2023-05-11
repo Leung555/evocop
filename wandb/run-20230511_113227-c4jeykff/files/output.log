@@ -1,0 +1,16 @@
+CPU_num:  16
+POPSIZE:  500
+EPISODE_LENGTH:  200
+REWARD_FUNCTION:  abs_y_distance
+ARCHITECTURE_NAME:  FeedForward
+ARCHITECTURE_size:  [18, 64, 32, 18]
+ENV_NAME:  scene_dbAlpha_test
+initial_time 180733.298645246
+<feedforward_neural_net.FeedForwardNet object at 0x7f0929ba1390>
+trainable parameters:  3776
+start_time 180733.321521991
+epoch 0 mean 0.09596906705084257 best 1.3457355499267578
+running time per epoch:  283.85784838499967
+start_time 181017.179636488
+epoch 1 mean 0.17272843008092603 best 1.914686918258667
+running time per epoch:  276.6131237880036
