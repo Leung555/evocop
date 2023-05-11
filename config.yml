@@ -2,18 +2,18 @@
 
 # CPU
 Device:
-  CPU_NUM: 8
+  CPU_NUM:  8 # workstation (32 failed), DELL 8
   TASK_PER_IND: 1
   
 # Simulation Environments
 ENV:
   NAME: 'scene_dbAlpha_test'
-  HEADLESS: False
+  HEADLESS: False # workstation (False), DELL (True)
 
 # ES algorithm
 ES_params:
-  POPSIZE: 2
-  EPISODE_LENGTH: 200
+  POPSIZE: 2 # workstation (500)
+  EPISODE_LENGTH: 200 # workstation (200)
   REWARD_FUNC: 'abs_y_distance'
   rank_fitness: True
   antithetic: True
@@ -26,9 +26,10 @@ ES_params:
 
 # Training Params
 Train_params:
-  EPOCH: 1
+  EPOCH: 1 # workstation (501)
   EVAL_EVERY: 2
-  SAVE_EVERY: 1
+  SAVE_EVERY: 100 # workstation (50)
+  USE_TRAIN_WEIGHT: True
 
 # Model
 Model:
@@ -52,5 +53,5 @@ Model:
 
 # WanDB Data Logging
 Wandb_log:
-  use_WanDB: False
+  use_WanDB: False # workstation (True)
   project_name: 'dbAlpha_wandb_log'

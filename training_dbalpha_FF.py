@@ -36,6 +36,7 @@ This code is modified/based on "example_reinforcement_learning_env.ttt"
 """
 # libraries for simulation environment
 from os.path import dirname, join, abspath
+from os import listdir
 from pyrep import PyRep
 from pyrep.robots.legged_robots.dbAlpha import dbAlpha
 from pyrep.objects.shape import Shape
@@ -86,6 +87,7 @@ SIGMA_LIMIT         = configs['ES_params']['sigma_limit']
 EPOCHS = configs['Train_params']['EPOCH']
 EVAL_EVERY = configs['Train_params']['EVAL_EVERY']
 SAVE_EVERY = configs['Train_params']['SAVE_EVERY']
+USE_TRAIN_WEIGHT = configs['Train_params']['USE_TRAIN_WEIGHT']
 
 # Model
 ARCHITECTURE_NAME = configs['Model']['FEEDFORWARD']['ARCHITECTURE']['name']
@@ -116,9 +118,18 @@ print("initial_time", initial_time)
 runs = ['d_']
 for run in runs:
 
-    init_net = FeedForwardNet(ARCHITECTURE)
+    # Using weight result from previous training
+    if USE_TRAIN_WEIGHT:
+        dir_path = './data/model/'
+        res = listdir(dir_path)
+        trained_data = pickle.load(open('./data/model/'+res[-1], 'rb'))
+        trained_net = trained_data[1]
+        print(trained_net)
+        init_params = trained_net.get_params()
 
-    init_params = init_net.get_params()
+    else:
+        init_net = FeedForwardNet(ARCHITECTURE)
+        init_params = init_net.get_params()
 
     print('trainable parameters: ', len(init_params))
 
