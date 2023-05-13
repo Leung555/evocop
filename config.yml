@@ -2,7 +2,7 @@
 
 # CPU
 Device:
-  CPU_NUM: 16 # workstation (used 16, 32 failed), DELL 8
+  CPU_NUM: 8 # workstation (used 16, 32 failed), DELL 8
   TASK_PER_IND: 1
   
 # Simulation Environments
@@ -14,7 +14,7 @@ ENV:
 ES_params:
   POPSIZE: 2 # workstation (500)
   EPISODE_LENGTH: 200 # workstation (200)
-  REWARD_FUNC: 'abs_y_distance'
+  REWARD_FUNC: 'abs_y_D_Pen_Orient' # 'abs_y_D_Pen_Orient
   rank_fitness: True
   antithetic: True
   learning_rate: 0.01
@@ -29,26 +29,28 @@ Train_params:
   EPOCH: 1 # workstation (501)
   EVAL_EVERY: 2
   SAVE_EVERY: 50 # workstation (50)
-  USE_TRAIN_WEIGHT: True
+  USE_TRAIN_WEIGHT: False
 
 # Model
 Model:
   FEEDFORWARD:
     input: 
       J_pos: 18
+      Orient: 3 # roll, pitch, yaw
     output: 
       J_pos: 18
     ARCHITECTURE: 
       name: 'FeedForward' # 'FeedForward'
-      size: [18, 64, 32, 18]
+      size: [21, 64, 32, 18]
   HEBB:
     input: 
       J_pos: 18
+      Orient: 3 
     output: 
       J_pos: 18
     ARCHITECTURE: 
       name: 'hebb' # 'FeedForward'
-      size: [18, 64, 32, 18]
+      size: [21, 64, 32, 18]
 
 
 # WanDB Data Logging

@@ -16,6 +16,9 @@ from pyrep.objects.shape import Shape
 import numpy as np
 import time
 import yaml
+from  utils.imu import *
+
+
 # open config files for reading prams
 with open('config.yml', 'r') as file:
     configs = yaml.safe_load(file)
@@ -29,6 +32,7 @@ class dbAlphaEnv(object):
         # print("launch sim")
         self.pr.start()
         self.agent = dbAlpha()
+        self.orientation = self.get_robot_euler()
         # self.agent.set_control_loop_enabled(False)
         # self.agent.set_motor_locked_at_zero_velocity(True)
         # self.target = Shape('target')
@@ -37,7 +41,8 @@ class dbAlphaEnv(object):
 
     def _get_state(self):
         # Return state containing arm joint angles position
-        return np.concatenate([self.agent.get_leg_joint_positions()])
+        return np.concatenate([self.agent.get_leg_joint_positions(),
+                               self.get_robot_euler()])
     
         # This code includes joint velocities
         # return np.concatenate([self.agent.get_joint_positions(),
@@ -45,6 +50,13 @@ class dbAlphaEnv(object):
 
     def get_robot_position(self):
         return self.agent.get_position()
+    
+    def get_robot_euler(self):
+        # get quaternion of the robot (q)
+        # Then tranfrom quaternion-->euler and return euler orientation  
+        q = self.agent.get_quaternion()
+        robot_euler = euler_from_quaternion(q[0], q[1], q[2], q[3])
+        return robot_euler
 
     def reset(self):
         # Get a random position within a cuboid and set the target position

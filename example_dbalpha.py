@@ -38,6 +38,7 @@ This code is modified/based on "example_reinforcement_learning_env.ttt"
 from os.path import dirname, join, abspath
 from pyrep import PyRep
 from pyrep.robots.legged_robots.dbAlpha import dbAlpha
+from dbAlphaEnv import dbAlphaEnv
 from pyrep.objects.shape import Shape
 import numpy as np
 import timeit
@@ -57,6 +58,30 @@ import pickle
 import numpy as np
 import yaml
 import wandb
+import matplotlib.pyplot as plt
+
+
+def euler_from_quaternion(x, y, z, w):
+        """
+        Convert a quaternion into euler angles (roll, pitch, yaw)
+        roll is rotation around x in radians (counterclockwise)
+        pitch is rotation around y in radians (counterclockwise)
+        yaw is rotation around z in radians (counterclockwise)
+        """
+        t0 = +2.0 * (w * x + y * z)
+        t1 = +1.0 - 2.0 * (x * x + y * y)
+        roll_x = np.arctan2(t0, t1)
+     
+        t2 = +2.0 * (w * y - z * x)
+        t2 = +1.0 if t2 > +1.0 else t2
+        t2 = -1.0 if t2 < -1.0 else t2
+        pitch_y = np.arcsin(t2)
+
+        t3 = +2.0 * (w * z + x * y)
+        t4 = +1.0 - 2.0 * (y * y + z * z)
+        yaw_z = np.arctan2(t3, t4)
+     
+        return [roll_x, pitch_y, yaw_z] # in radians
 
 # scene file destination
 SCENE_FILE = join(dirname(abspath(__file__)),
@@ -65,7 +90,7 @@ SCENE_FILE = join(dirname(abspath(__file__)),
 
 # ES parameters configuration
 EPISODES = 2
-EPISODE_LENGTH = 100
+EPISODE_LENGTH = 50
 
 # initiate Coppeliasim simulation
 # pr = PyRep()
@@ -85,7 +110,7 @@ ARCHITECTURE = [inp_size,
                 action_size]
 
 # CPU cores for training 
-cpus = 1
+cpus = 6
 
 # Training parameters
 EPOCHS = 1
@@ -130,55 +155,98 @@ for run in runs:
             #####################################
             # Test fitness in the simulation    #
             #####################################
-            # Do some stuffs
-            # time.sleep(2)
+            # Test simulation speed by printing simulation step
+            # pr = PyRep()
+            # pr.launch(SCENE_FILE, headless=True)
+            # pr.start()
+            # print('---start simulation---')
+
+            # for i in range(EPISODE_LENGTH):
+            #     print("step: ", i)
+
+            #     # step simulation
+            #     pr.step()
+
+            # # stop simulation
+            # print('---stop simulation---')            
+            # # time.sleep(2)
+            # pr.stop()
+            # pr.shutdown()
+            # mean += 5 # TODO test reward value
+            # print('mean: ', mean)
+            #######################################
+
+            ###################################
+            # Test function in simulation
             pr = PyRep()
-            pr.launch(SCENE_FILE, headless=True)
-            # agent = dbAlpha()
+            pr.launch(SCENE_FILE, headless=False)
+            # print("launch sim")
             pr.start()
-            print('---start simulation---')
-
-            for i in range(EPISODE_LENGTH):
-                print("step: ", i)
-
+            agent = dbAlpha()
+            # print('---start simulation---')
+            done = False
+            r_tot = 0
+            counter = 0
+            tilt_penalty = 0
+            robot_quartenion_series = np.empty(shape=[EPISODE_LENGTH, 4])
+            robot_euler_series = np.empty(shape=[EPISODE_LENGTH, 3])
+            robot_position_series = np.empty(shape=[EPISODE_LENGTH, 3])
+            # print("robot_quartenion_series: ", robot_quartenion_series)
+            while not done:
+                print("step: ", counter)
+                if counter+1 > EPISODE_LENGTH:
+                    done = True
+                    break
+                
                 # Sensing
-                # joint_angles = np.array(agent.get_joint_positions())
-                # action = net.forward(joint_angles)
-                # action = net.forward(obs)
-                # target_pos = []
-                # for i in range(18): 
-                #     temp = random.gauss(0, 1)
-                #     target_pos.append(temp)
-                    
-                # # Actuation
-                # agent.set_joint_positions(action)
-                # print("action: ",action )
+                # joint_angles = np.array(env.agent.get_joint_positions())
+                # # print("joint_angles: ", joint_angles)
+                robot_position = agent.get_position()
+                robot_orient = agent.get_quaternion()
+                # robot_quartenion_series[counter] = robot_orient
+                x = robot_orient[0]
+                y = robot_orient[1]
+                z = robot_orient[2]
+                w = robot_orient[3]
+                robot_euler_series[counter] = euler_from_quaternion(x,y,z,w)
+                roll    = robot_euler_series[counter][0]
+                pitch   = robot_euler_series[counter][1]
+                yaw     = robot_euler_series[counter][2]                # # print(test)
+                # # print("action: ", action)
+                # print("robot_position: ", robot_position_series[counter])
+                # print("robot_orientation: ", robot_orient)
 
-                # step simulation
+                # obs, r, done, _ = env.step(action)
                 pr.step()
+                
+                # Calculate reward from sensor
+                tilt_lim_rad = 0.35 # (-20,+20) degrees
+                if abs(roll) > tilt_lim_rad or abs(pitch) > tilt_lim_rad:
+                    tilt_penalty -= 0.4
 
-                # replay_buffer.append((state, action, reward, next_state))
-                # state = next_state
-                # agent.learn(replay_buffer)
+                counter += 1
+            # print("robot_quartenion_series: ", robot_quartenion_series)
+            # print("robot_euler_series: ", robot_euler_series)
 
-            # stop simulation
-            print('---stop simulation---')            
-            # time.sleep(2)
+            r_tot += robot_position[1]+tilt_penalty # y axis distance
+            mean += r_tot
+            print('r_total', r_tot)
+            print('robot_position', robot_position[1])
+            print('tilt_penalty', tilt_penalty)
+            # env.stop_simulation()
             pr.stop()
             pr.shutdown()
-            mean += 5 # TODO test reward value
-            print('mean: ', mean)
-            # done = False
-            # r_tot = 0
-            # while not done:
-            #     action = net.forward(obs)
-            #     obs, r, done, _ = env.step(action)
-            #     r_tot += r
-            # env.close()
-            # return r_tot
-            # mean += fitness(net, ENV_NAME) # FIXME ############
-            
-            ####################################3
+            # print('---shutdown simulation---')
+
+            # Visualize data
+            # print(robot_position_series)
+            plt.figure()
+            plt.plot(robot_euler_series[:,0])
+            plt.plot(robot_euler_series[:,1])
+            plt.plot(robot_euler_series[:,2])
+            plt.show()
+            ####################################
+
         return mean/TASK_PER_IND
     
     pop_mean_curve = np.zeros(EPOCHS)
@@ -191,8 +259,9 @@ for run in runs:
 
         solutions = solver.ask()
 
-        with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
-            fitlist = executor.map(worker_fn, [params for params in solutions])
+        reward = worker_fn(solutions[0])
+        # with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
+        #     fitlist = executor.map(worker_fn, [params for params in solutions])
 
         # fitlist = list(fitlist)
         # solver.tell(fitlist)
@@ -251,3 +320,4 @@ for run in runs:
 
 # pr.stop()
 # pr.shutdown()
+

@@ -108,9 +108,6 @@ print("initial_time", initial_time)
 
 dir_path = './data/model/'
 res = listdir(dir_path)
-trained_data = pickle.load(open('./data/model/'+res[-1], 'rb'))
-open_es_data = trained_data[0]
-init_params = open_es_data.mu
 # init_net = FeedForwardNet(ARCHITECTURE)
 # init_net.set_params(init_params)
 
@@ -148,28 +145,34 @@ for run in runs:
     best_sol_curve = np.zeros(EPOCHS)
     eval_curve = np.zeros(EPOCHS)
 
+    for i, file_name in enumerate(res):
+        trained_data = pickle.load(open('./data/model/'+file_name, 'rb'))
+        open_es_data = trained_data[0]
+        init_params = open_es_data.mu
+        reward = worker_fn(init_params)
 
+        print("reward: ", reward)
     for epoch in range(EPOCHS):
         start_time = timeit.default_timer()
         print("start_time", start_time)
 
         # solutions = solver.ask()
 
-        with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
-            fitlist = executor.map(worker_fn, [params for params in [init_params]])
+        # with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
+        #     fitlist = executor.map(worker_fn, [params for params in [init_params]])
         
-        fitlist = list(fitlist)
-        # solver.tell(fitlist)
+        # fitlist = list(fitlist)
+        # # solver.tell(fitlist)
 
-        fit_arr = np.array(fitlist)
+        # fit_arr = np.array(fitlist)
 
-        print('epoch', epoch, 'mean', fit_arr.mean(), "best", fit_arr.max(), )
-        with open('log_'+str(run)+'.txt', 'a') as outfile:
-            outfile.write('epoch: ' + str(epoch)
-                    + ' mean: ' + str(fit_arr.mean())
-                    + ' best: ' + str(fit_arr.max())
-                    + ' worst: ' + str(fit_arr.min())
-                    + ' std.: ' + str(fit_arr.std()) + '\n')
+        # print('epoch', epoch, 'mean', fit_arr.mean(), "best", fit_arr.max(), )
+        # with open('log_'+str(run)+'.txt', 'a') as outfile:
+        #     outfile.write('epoch: ' + str(epoch)
+        #             + ' mean: ' + str(fit_arr.mean())
+        #             + ' best: ' + str(fit_arr.max())
+        #             + ' worst: ' + str(fit_arr.min())
+        #             + ' std.: ' + str(fit_arr.std()) + '\n')
             
         # pop_mean_curve[epoch] = fit_arr.mean()
         # best_sol_curve[epoch] = fit_arr.max()
