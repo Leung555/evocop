@@ -19,7 +19,7 @@ def fitness(net: HebbianNet, env_name: str,
     tilt_lim_rad = 0.35 # (-20,+20) degrees
 
     while not done:
-        # print("step: ", counter)
+        print("step: ", counter)
         if counter+1 > episode_length:
             done = True 
             break       
@@ -44,7 +44,7 @@ def fitness(net: HebbianNet, env_name: str,
             tilt_penalty -= 0.1
 
         counter += 1
-    r_tot += robot_position[1]+tilt_penalty # y axis distance
+    r_tot += robot_position[0]+tilt_penalty # y axis distance
     
     # env.stop_simulation()
     env.shutdown()

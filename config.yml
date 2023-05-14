@@ -14,7 +14,7 @@ ENV:
 ES_params:
   POPSIZE: 2 # workstation (500)
   EPISODE_LENGTH: 200 # workstation (200)
-  REWARD_FUNC: 'abs_y_D_Pen_Orient' # 'abs_y_D_Pen_Orient
+  REWARD_FUNC: 'abs_x_D_Pen_Orient' # 'abs_y_D_Pen_Orient
   rank_fitness: True
   antithetic: True
   learning_rate: 0.01
