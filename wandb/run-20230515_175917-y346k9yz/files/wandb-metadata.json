@@ -1,0 +1,85 @@
+{
+    "os": "Linux-5.19.0-41-generic-x86_64-with-glibc2.35",
+    "python": "3.10.6",
+    "heartbeatAt": "2023-05-15T15:59:18.589865",
+    "startedAt": "2023-05-15T15:59:17.807823",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/bile-itu/git/dbAlpha_hebb/training_dbalpha_FF.py",
+    "codePath": "training_dbalpha_FF.py",
+    "git": {
+        "remote": "https://github.com/Leung555/dbAlpha_hebb.git",
+        "commit": "ca63b8e3e36136d5d0ca7fdf87981adb3a6364ab"
+    },
+    "email": "binggwong.l_s17@vistec.ac.th",
+    "root": "/home/bile-itu/git/dbAlpha_hebb",
+    "host": "bileitu-workstation",
+    "username": "bile-itu",
+    "executable": "/home/bile-itu/hebbian_env/bin/python",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 1789.9081250000002,
+        "min": 800.0,
+        "max": 4500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.018,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1700.016,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1700.032,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1700.019,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1700.017,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1700.005,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1700.032,
+            "min": 800.0,
+            "max": 4500.0
+        },
+        {
+            "current": 1700.007,
+            "min": 800.0,
+            "max": 4500.0
+        }
+    ],
+    "disk": {
+        "total": 456.8854446411133,
+        "used": 42.48588943481445
+    },
+    "gpu": "NVIDIA GeForce RTX 2070",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2070",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 31.220211029052734
+    }
+}

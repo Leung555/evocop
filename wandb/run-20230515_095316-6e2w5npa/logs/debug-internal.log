@@ -1,0 +1,140 @@
+2023-05-15 09:53:16,280 INFO    StreamThr :1493397 [internal.py:wandb_internal():86] W&B internal server running at pid: 1493397, started at: 2023-05-15 09:53:16.280112
+2023-05-15 09:53:16,281 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: status
+2023-05-15 09:53:16,282 INFO    WriterThread:1493397 [datastore.py:open_for_write():85] open: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/run-6e2w5npa.wandb
+2023-05-15 09:53:16,283 DEBUG   SenderThread:1493397 [sender.py:send():375] send: header
+2023-05-15 09:53:16,285 DEBUG   SenderThread:1493397 [sender.py:send():375] send: run
+2023-05-15 09:53:16,894 INFO    SenderThread:1493397 [dir_watcher.py:__init__():219] watching files in: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files
+2023-05-15 09:53:16,894 INFO    SenderThread:1493397 [sender.py:_start_run_threads():1124] run started: 6e2w5npa with start time 1684137196.279922
+2023-05-15 09:53:16,894 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: summary_record
+2023-05-15 09:53:16,895 INFO    SenderThread:1493397 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-15 09:53:16,900 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: check_version
+2023-05-15 09:53:16,900 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: check_version
+2023-05-15 09:53:17,026 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: run_start
+2023-05-15 09:53:17,034 DEBUG   HandlerThread:1493397 [system_info.py:__init__():31] System info init
+2023-05-15 09:53:17,034 DEBUG   HandlerThread:1493397 [system_info.py:__init__():46] System info init done
+2023-05-15 09:53:17,034 INFO    HandlerThread:1493397 [system_monitor.py:start():181] Starting system monitor
+2023-05-15 09:53:17,034 INFO    SystemMonitor:1493397 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-15 09:53:17,034 INFO    HandlerThread:1493397 [system_monitor.py:probe():201] Collecting system info
+2023-05-15 09:53:17,034 INFO    SystemMonitor:1493397 [interfaces.py:start():190] Started cpu monitoring
+2023-05-15 09:53:17,036 INFO    SystemMonitor:1493397 [interfaces.py:start():190] Started disk monitoring
+2023-05-15 09:53:17,036 INFO    SystemMonitor:1493397 [interfaces.py:start():190] Started gpu monitoring
+2023-05-15 09:53:17,037 INFO    SystemMonitor:1493397 [interfaces.py:start():190] Started memory monitoring
+2023-05-15 09:53:17,037 INFO    SystemMonitor:1493397 [interfaces.py:start():190] Started network monitoring
+2023-05-15 09:53:17,043 DEBUG   HandlerThread:1493397 [system_info.py:probe():195] Probing system
+2023-05-15 09:53:17,045 DEBUG   HandlerThread:1493397 [system_info.py:_probe_git():180] Probing git
+2023-05-15 09:53:17,050 DEBUG   HandlerThread:1493397 [system_info.py:_probe_git():188] Probing git done
+2023-05-15 09:53:17,050 DEBUG   HandlerThread:1493397 [system_info.py:probe():240] Probing system done
+2023-05-15 09:53:17,050 DEBUG   HandlerThread:1493397 [system_monitor.py:probe():210] {'os': 'Linux-5.19.0-41-generic-x86_64-with-glibc2.35', 'python': '3.10.6', 'heartbeatAt': '2023-05-15T07:53:17.043316', 'startedAt': '2023-05-15T07:53:16.276023', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/bile-itu/git/dbAlpha_hebb/training_dbalpha_FF.py', 'codePath': 'training_dbalpha_FF.py', 'git': {'remote': 'https://github.com/Leung555/dbAlpha_hebb.git', 'commit': 'ca63b8e3e36136d5d0ca7fdf87981adb3a6364ab'}, 'email': 'binggwong.l_s17@vistec.ac.th', 'root': '/home/bile-itu/git/dbAlpha_hebb', 'host': 'bileitu-workstation', 'username': 'bile-itu', 'executable': '/home/bile-itu/hebbian_env/bin/python', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3041.91325, 'min': 800.0, 'max': 4500.0}, 'cpu_freq_per_core': [{'current': 2899.81, 'min': 800.0, 'max': 4500.0}, {'current': 2899.821, 'min': 800.0, 'max': 4500.0}, {'current': 2900.037, 'min': 800.0, 'max': 4500.0}, {'current': 2900.024, 'min': 800.0, 'max': 4500.0}, {'current': 2900.087, 'min': 800.0, 'max': 4500.0}, {'current': 2900.105, 'min': 800.0, 'max': 4500.0}, {'current': 2900.014, 'min': 800.0, 'max': 4500.0}, {'current': 3087.3, 'min': 800.0, 'max': 4500.0}], 'disk': {'total': 456.8854446411133, 'used': 42.308780670166016}, 'gpu': 'NVIDIA GeForce RTX 2070', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2070', 'memory_total': 8589934592}], 'memory': {'total': 31.220211029052734}}
+2023-05-15 09:53:17,050 INFO    HandlerThread:1493397 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-15 09:53:17,050 INFO    HandlerThread:1493397 [system_monitor.py:probe():214] Publishing system info
+2023-05-15 09:53:17,050 DEBUG   HandlerThread:1493397 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-15 09:53:17,051 DEBUG   HandlerThread:1493397 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-15 09:53:17,051 INFO    HandlerThread:1493397 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-15 09:53:17,053 DEBUG   SenderThread:1493397 [sender.py:send():375] send: files
+2023-05-15 09:53:17,053 INFO    SenderThread:1493397 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-15 09:53:17,058 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-15 09:53:17,059 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: stop_status
+2023-05-15 09:53:17,325 DEBUG   SenderThread:1493397 [sender.py:send():375] send: telemetry
+2023-05-15 09:53:17,692 INFO    wandb-upload_0:1493397 [upload_job.py:push():137] Uploaded file /tmp/tmpo6xcgib_wandb/0czv0ke9-wandb-metadata.json
+2023-05-15 09:53:17,895 INFO    Thread-12 :1493397 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/wandb-metadata.json
+2023-05-15 09:53:17,896 INFO    Thread-12 :1493397 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/wandb-summary.json
+2023-05-15 09:53:17,896 INFO    Thread-12 :1493397 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/requirements.txt
+2023-05-15 09:53:17,896 INFO    Thread-12 :1493397 [dir_watcher.py:_on_file_created():278] file/dir created: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/output.log
+2023-05-15 09:53:19,895 INFO    Thread-12 :1493397 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/output.log
+2023-05-15 09:53:21,332 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 09:53:26,333 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 09:53:28,495 DEBUG   SenderThread:1493397 [sender.py:send():375] send: exit
+2023-05-15 09:53:28,495 INFO    SenderThread:1493397 [sender.py:send_exit():598] handling exit code: 255
+2023-05-15 09:53:28,496 INFO    SenderThread:1493397 [sender.py:send_exit():600] handling runtime: 11
+2023-05-15 09:53:28,496 INFO    SenderThread:1493397 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-15 09:53:28,496 INFO    SenderThread:1493397 [sender.py:send_exit():606] send defer
+2023-05-15 09:53:28,496 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:28,496 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-15 09:53:28,497 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:28,497 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-05-15 09:53:28,498 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 1
+2023-05-15 09:53:28,498 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:28,498 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-15 09:53:28,498 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:28,498 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-05-15 09:53:28,498 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 2
+2023-05-15 09:53:28,498 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:28,498 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-15 09:53:28,498 INFO    HandlerThread:1493397 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-15 09:53:28,498 DEBUG   SystemMonitor:1493397 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-15 09:53:28,498 DEBUG   SystemMonitor:1493397 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-15 09:53:28,498 DEBUG   SystemMonitor:1493397 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-15 09:53:28,503 INFO    HandlerThread:1493397 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-15 09:53:28,503 INFO    HandlerThread:1493397 [interfaces.py:finish():202] Joined disk monitor
+2023-05-15 09:53:28,579 INFO    HandlerThread:1493397 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-15 09:53:28,579 INFO    HandlerThread:1493397 [interfaces.py:finish():202] Joined memory monitor
+2023-05-15 09:53:28,579 INFO    HandlerThread:1493397 [interfaces.py:finish():202] Joined network monitor
+2023-05-15 09:53:28,579 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:28,579 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-05-15 09:53:28,580 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 3
+2023-05-15 09:53:28,580 DEBUG   SenderThread:1493397 [sender.py:send():375] send: stats
+2023-05-15 09:53:28,580 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:28,580 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-15 09:53:28,580 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:28,580 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-05-15 09:53:28,580 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 4
+2023-05-15 09:53:28,580 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:28,580 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-15 09:53:28,580 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:28,581 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-05-15 09:53:28,581 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 5
+2023-05-15 09:53:28,581 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:28,581 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-15 09:53:28,581 DEBUG   SenderThread:1493397 [sender.py:send():375] send: summary
+2023-05-15 09:53:28,581 INFO    SenderThread:1493397 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-15 09:53:28,581 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:28,581 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-05-15 09:53:28,581 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 6
+2023-05-15 09:53:28,582 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:28,582 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-15 09:53:28,582 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:28,582 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-05-15 09:53:28,587 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: status_report
+2023-05-15 09:53:28,781 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 7
+2023-05-15 09:53:28,781 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:28,781 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-15 09:53:28,782 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:28,782 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-05-15 09:53:28,897 INFO    Thread-12 :1493397 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/wandb-summary.json
+2023-05-15 09:53:28,897 INFO    Thread-12 :1493397 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/config.yaml
+2023-05-15 09:53:29,491 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-15 09:53:30,485 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 8
+2023-05-15 09:53:30,485 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: poll_exit
+2023-05-15 09:53:30,485 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:30,485 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-15 09:53:30,486 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: defer
+2023-05-15 09:53:30,486 INFO    SenderThread:1493397 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-05-15 09:53:30,491 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-15 09:53:30,493 INFO    SenderThread:1493397 [sender.py:transition_state():626] send defer: 9
+2023-05-15 09:53:30,493 DEBUG   SenderThread:1493397 [sender.py:send_request():402] send_request: poll_exit
+2023-05-15 09:53:30,493 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: defer
+2023-05-15 09:53:30,494 INFO    HandlerThread:1493397 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-15 09:53:30,494 DEBUG   SenderThread:1493397 [sender.py:send():375] send: artifact
+2023-05-15 09:53:30,898 INFO    Thread-12 :1493397 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/output.log
+2023-05-15 09:53:31,492 DEBUG   HandlerThread:1493397 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-15 09:53:33,074 INFO    wandb-upload_1:1493397 [upload_job.py:push():92] Skipped uploading /home/bile-itu/.local/share/wandb/artifacts/staging/tmp49adr1yc
+2023-05-15 09:53:33,301 WARNING StreamThr :1493397 [internal.py:is_dead():414] Internal process exiting, parent pid 1493383 disappeared
+2023-05-15 09:53:33,301 ERROR   StreamThr :1493397 [internal.py:wandb_internal():152] Internal process shutdown.
+2023-05-15 09:53:33,492 INFO    HandlerThread:1493397 [handler.py:finish():845] shutting down handler
+2023-05-15 09:53:33,493 INFO    WriterThread:1493397 [datastore.py:close():298] close: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/run-6e2w5npa.wandb
+2023-05-15 09:53:33,600 INFO    wandb-upload_0:1493397 [upload_job.py:push():95] Uploaded file /home/bile-itu/.local/share/wandb/artifacts/staging/tmp833w4eu5
+2023-05-15 09:53:35,446 INFO    SenderThread:1493397 [sender.py:send_artifact():1474] sent artifact job-https___github.com_Leung555_dbAlpha_hebb.git_training_dbalpha_FF.py - {'id': 'QXJ0aWZhY3Q6NDU1NDgzOTEw', 'digest': 'ac20c214466702178287254d0ee1d892', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY3OTIzMzA4', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDU0ODc1MjIz', 'versionIndex': 4}}, 'version': 'latest'}
+2023-05-15 09:53:35,447 INFO    SenderThread:1493397 [sender.py:finish():1550] shutting down sender
+2023-05-15 09:53:35,447 INFO    SenderThread:1493397 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-05-15 09:53:35,900 INFO    SenderThread:1493397 [dir_watcher.py:finish():395] scan: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files
+2023-05-15 09:53:35,900 INFO    SenderThread:1493397 [dir_watcher.py:finish():409] scan save: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/output.log output.log
+2023-05-15 09:53:35,901 INFO    SenderThread:1493397 [dir_watcher.py:finish():409] scan save: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/wandb-summary.json wandb-summary.json
+2023-05-15 09:53:35,909 INFO    SenderThread:1493397 [dir_watcher.py:finish():409] scan save: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/config.yaml config.yaml
+2023-05-15 09:53:35,911 INFO    SenderThread:1493397 [dir_watcher.py:finish():409] scan save: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/wandb-metadata.json wandb-metadata.json
+2023-05-15 09:53:35,911 INFO    SenderThread:1493397 [dir_watcher.py:finish():409] scan save: /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/requirements.txt requirements.txt
+2023-05-15 09:53:35,918 INFO    SenderThread:1493397 [file_pusher.py:finish():167] shutting down file pusher
+2023-05-15 09:53:35,918 INFO    SenderThread:1493397 [file_pusher.py:join():172] waiting for file pusher
+2023-05-15 09:53:36,385 INFO    wandb-upload_1:1493397 [upload_job.py:push():137] Uploaded file /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/output.log
+2023-05-15 09:53:36,512 INFO    wandb-upload_2:1493397 [upload_job.py:push():137] Uploaded file /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/wandb-summary.json
+2023-05-15 09:53:36,663 INFO    wandb-upload_3:1493397 [upload_job.py:push():137] Uploaded file /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/requirements.txt
+2023-05-15 09:53:36,671 INFO    wandb-upload_0:1493397 [upload_job.py:push():137] Uploaded file /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_095316-6e2w5npa/files/config.yaml

@@ -1,0 +1,26 @@
+2023-05-15 17:59:17,813 INFO    MainThread:2097366 [wandb_setup.py:_flush():76] Current SDK version is 0.15.2
+2023-05-15 17:59:17,814 INFO    MainThread:2097366 [wandb_setup.py:_flush():76] Configure stats pid to 2097366
+2023-05-15 17:59:17,814 INFO    MainThread:2097366 [wandb_setup.py:_flush():76] Loading settings from /home/bile-itu/.config/wandb/settings
+2023-05-15 17:59:17,814 INFO    MainThread:2097366 [wandb_setup.py:_flush():76] Loading settings from /home/bile-itu/git/dbAlpha_hebb/wandb/settings
+2023-05-15 17:59:17,815 INFO    MainThread:2097366 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-15 17:59:17,815 INFO    MainThread:2097366 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-15 17:59:17,815 INFO    MainThread:2097366 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'training_dbalpha_FF.py', 'program': '/home/bile-itu/git/dbAlpha_hebb/training_dbalpha_FF.py'}
+2023-05-15 17:59:17,816 INFO    MainThread:2097366 [wandb_init.py:_log_setup():507] Logging user logs to /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_175917-y346k9yz/logs/debug.log
+2023-05-15 17:59:17,816 INFO    MainThread:2097366 [wandb_init.py:_log_setup():508] Logging internal logs to /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230515_175917-y346k9yz/logs/debug-internal.log
+2023-05-15 17:59:17,817 INFO    MainThread:2097366 [wandb_init.py:init():547] calling init triggers
+2023-05-15 17:59:17,817 INFO    MainThread:2097366 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'Device': {'CPU_NUM': 16, 'TASK_PER_IND': 1}, 'ENV': {'NAME': 'scene_dbAlpha_test', 'HEADLESS': True}, 'ES_params': {'POPSIZE': 300, 'EPISODE_LENGTH': 200, 'REWARD_FUNC': 'abs_x_D_Pen_Orient', 'rank_fitness': True, 'antithetic': True, 'learning_rate': 0.1, 'learning_rate_decay': 0.9999, 'sigma_init': 1, 'sigma_decay': 0.999, 'learning_rate_limit': 0.001, 'sigma_limit': 0.01}, 'Train_params': {'EPOCH': 501, 'EVAL_EVERY': 2, 'SAVE_EVERY': 100, 'USE_TRAIN_WEIGHT': False}, 'Model': {'FEEDFORWARD': {'input': {'J_pos': 18, 'Orient': 3}, 'output': {'J_pos': 18}, 'ARCHITECTURE': {'name': 'FeedForward', 'size': [21, 64, 32, 18]}}, 'HEBB': {'input': {'J_pos': 18, 'Orient': 3}, 'output': {'J_pos': 18}, 'ARCHITECTURE': {'name': 'hebb', 'size': [21, 64, 32, 18]}}}, 'Wandb_log': {'use_WanDB': True, 'project_name': 'dbAlpha_wandb_log'}}
+2023-05-15 17:59:17,818 INFO    MainThread:2097366 [wandb_init.py:init():596] starting backend
+2023-05-15 17:59:17,818 INFO    MainThread:2097366 [wandb_init.py:init():600] setting up manager
+2023-05-15 17:59:17,827 INFO    MainThread:2097366 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-15 17:59:17,832 INFO    MainThread:2097366 [wandb_init.py:init():606] backend started and connected
+2023-05-15 17:59:17,834 INFO    MainThread:2097366 [wandb_init.py:init():700] updated telemetry
+2023-05-15 17:59:17,838 INFO    MainThread:2097366 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2023-05-15 17:59:18,405 INFO    MainThread:2097366 [wandb_run.py:_on_init():2177] communicating current version
+2023-05-15 17:59:18,555 INFO    MainThread:2097366 [wandb_run.py:_on_init():2186] got version response 
+2023-05-15 17:59:18,555 INFO    MainThread:2097366 [wandb_init.py:init():787] starting run threads in backend
+2023-05-15 17:59:18,614 INFO    MainThread:2097366 [wandb_run.py:_console_start():2158] atexit reg
+2023-05-15 17:59:18,615 INFO    MainThread:2097366 [wandb_run.py:_redirect():2013] redirect: SettingsConsole.WRAP_RAW
+2023-05-15 17:59:18,616 INFO    MainThread:2097366 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2023-05-15 17:59:18,616 INFO    MainThread:2097366 [wandb_run.py:_redirect():2103] Redirects installed.
+2023-05-15 17:59:18,617 INFO    MainThread:2097366 [wandb_init.py:init():829] run started, returning control to user process

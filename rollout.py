@@ -19,7 +19,7 @@ def fitness(net: HebbianNet, env_name: str,
     tilt_lim_rad = 0.35 # (-20,+20) degrees
 
     while not done:
-        print("step: ", counter)
+        # print("step: ", counter)
         if counter+1 > episode_length:
             done = True 
             break       
