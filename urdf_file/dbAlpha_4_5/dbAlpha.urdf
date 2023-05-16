@@ -1,0 +1,1338 @@
+<?xml version="1.0"?>
+<robot name="dbAlpha_base">
+    <link name="base_link">
+        <inertial>
+            <origin rpy="-3.141593 3.141593 -3.141593" xyz="-0.006292 -0.000036 0.350842" />
+            <inertia izz="0.0032060973793816" iyz="3.4328627291976e-06" ixx="0.0013298139614171" iyy="0.002971610314483" ixz="-0.00041864907431027" ixy="3.2505454879773e-05" />
+            <mass value="0.79273247718811" />
+        </inertial>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.082704 -0.003433 0.390925" rpy="-3.128772 3.179409 3.124468" />
+            <geometry>
+                <box size="0.025000 0.025000 0.025000" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.032815 0.045311 0.321212" rpy="2.436458 3.397691 1.956746" />
+            <geometry>
+                <cylinder length="0.03990364074707" radius="0.0097124055027962" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.064052 0.000006 0.364870" rpy="0.000632 3.762836 -0.000845" />
+            <geometry>
+                <box size="0.028509 0.034007 0.046500" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.036285 0.034788 0.326053" rpy="2.007809 3.762685 -0.000615" />
+            <geometry>
+                <box size="0.028510 0.034011 0.046512" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.036267 -0.034789 0.326078" rpy="-2.006940 3.762685 -0.000403" />
+            <geometry>
+                <box size="0.028510 0.034011 0.046510" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.053841 0.043629 0.327704" rpy="2.356639 3.762685 -0.000616" />
+            <geometry>
+                <box size="0.003008 0.024930 0.042689" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.050993 -0.027731 0.319586" rpy="-2.006940 3.762685 -0.000403" />
+            <geometry>
+                <box size="0.003007 0.022007 0.041591" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.025482 -0.027801 0.338065" rpy="1.134698 3.762685 -0.000616" />
+            <geometry>
+                <box size="0.003004 0.022401 0.041592" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.051007 0.027718 0.319567" rpy="2.007811 3.762684 -0.000616" />
+            <geometry>
+                <box size="0.003007 0.022007 0.041593" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.025393 0.027731 0.337901" rpy="-1.133829 3.762685 -0.000403" />
+            <geometry>
+                <box size="0.003005 0.022010 0.041591" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.066935 0.000916 0.341836" rpy="-3.141431 3.762686 -0.000403" />
+            <geometry>
+                <box size="0.003010 0.037973 0.057110" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.041320 -0.000907 0.360171" rpy="-3.140888 3.762687 -0.000616" />
+            <geometry>
+                <box size="0.003010 0.037974 0.057110" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.068179 0.000007 0.370635" rpy="0.000392 3.762840 -0.000437" />
+            <geometry>
+                <box size="0.028502 0.040002 0.060680" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.039778 0.000036 0.367715" rpy="-3.141051 3.779570 -0.000270" />
+            <geometry>
+                <box size="0.036349 0.040023 0.088862" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.024593 -0.018472 0.396442" rpy="1.612754 3.141944 1.570536" />
+            <geometry>
+                <box size="0.003001 0.031555 0.093054" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.055113 0.000032 0.353015" rpy="-3.141062 3.762855 -0.000674" />
+            <geometry>
+                <box size="0.028504 0.034004 0.046500" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.017492 0.018530 0.396712" rpy="1.528927 3.141244 -1.571050" />
+            <geometry>
+                <box size="0.003000 0.030393 0.107240" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.069889 0.051276 0.332337" rpy="-0.784986 3.762686 -0.000402" />
+            <geometry>
+                <box size="0.028508 0.034007 0.046503" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.079127 0.044205 0.346495" rpy="2.356509 3.762685 -0.000402" />
+            <geometry>
+                <box size="0.003006 0.023341 0.042689" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.069915 -0.051219 0.332374" rpy="-2.355738 3.762685 -0.000616" />
+            <geometry>
+                <box size="0.028508 0.034008 0.046503" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.079150 -0.044131 0.346526" rpy="0.785879 3.762685 -0.000616" />
+            <geometry>
+                <box size="0.003005 0.023341 0.042689" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.071235 0.000095 0.357553" rpy="-1.576121 3.762685 -0.000616" />
+            <geometry>
+                <box size="0.003010 0.034949 0.074651" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.045582 -0.004067 0.339276" rpy="1.571164 3.762692 -0.000388" />
+            <geometry>
+                <box size="0.003008 0.034751 0.066469" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.053535 -0.044153 0.328192" rpy="-2.355284 3.762688 -0.000404" />
+            <geometry>
+                <box size="0.003008 0.023348 0.042686" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.025649 0.000031 0.406751" rpy="-1.571818 1.926986 3.140377" />
+            <geometry>
+                <cylinder length="0.034001111984253" radius="0.0020486116409302" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.026488 0.000024 0.386769" rpy="-1.572104 4.440180 -3.140590" />
+            <geometry>
+                <cylinder length="0.034000873565674" radius="0.0020487755537033" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.075723 0.058169 0.324210" rpy="2.549536 3.947053 1.793942" />
+            <geometry>
+                <cylinder length="0.042402267456055" radius="0.0097112059593201" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.023468 0.000036 0.384671" rpy="-1.571250 3.811981 -3.141565" />
+            <geometry>
+                <cylinder length="0.034000158309937" radius="0.0020487885922194" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.075712 -0.058127 0.324206" rpy="0.954367 3.044734 -2.682950" />
+            <geometry>
+                <cylinder length="0.042402625083923" radius="0.0097114741802216" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.032108 -0.044761 0.320355" rpy="2.467905 3.480263 0.500674" />
+            <geometry>
+                <cylinder length="0.042401909828186" radius="0.0097118318080902" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.071036 -0.022742 0.374611" rpy="1.570431 3.357126 3.141414" />
+            <geometry>
+                <cylinder length="0.007500171661377" radius="0.01048712618649" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.063233 -0.029240 0.376433" rpy="-1.571660 1.998854 3.140549" />
+            <geometry>
+                <cylinder length="0.0054996013641357" radius="0.0014872252941132" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.063248 0.029261 0.376412" rpy="-1.571184 3.569612 3.141499" />
+            <geometry>
+                <cylinder length="0.0055007934570312" radius="0.0014872066676617" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="0.071045 0.022758 0.374614" rpy="-1.571535 3.357200 -3.140055" />
+            <geometry>
+                <cylinder length="0.0075352191925049" radius="0.010494554415345" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.048123 0.022784 0.362765" rpy="-1.570439 3.309800 -0.000317" />
+            <geometry>
+                <cylinder length="0.0075004100799561" radius="0.010499980300665" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.055269 -0.029215 0.359160" rpy="-1.566211 4.635024 -0.004827" />
+            <geometry>
+                <cylinder length="0.0055000782012939" radius="0.0014871954917908" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.048135 -0.022716 0.362782" rpy="1.571462 2.131499 0.000308" />
+            <geometry>
+                <cylinder length="0.0075006484985352" radius="0.010499926283956" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_base">
+            <origin xyz="-0.055254 0.029285 0.359139" rpy="-1.570342 3.849252 -0.000567" />
+            <geometry>
+                <cylinder length="0.005500316619873" radius="0.0014872625470161" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaTA" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.34906587004662" lower="-0.43633231520653" velocity="1.0471975803375" />
+        <parent link="base_link" />
+        <child link="Thorax" />
+        <origin xyz="0.084022 -0.001600 0.387782" rpy="1.583457 3.283007 0.015086" />
+    </joint>
+    <link name="Thorax">
+        <inertial>
+            <origin rpy="1.583333 3.158462 0.141214" xyz="-0.079260 0.029651 -0.001808" />
+            <inertia izz="0.00081537963885578" iyz="1.8068792287944e-05" ixx="0.00093384334259596" iyy="0.0004049212992919" ixz="7.8571802847512e-05" ixy="5.102323436859e-06" />
+            <mass value="0.39300000667572" />
+        </inertial>
+        <collision name="Thorax">
+            <origin xyz="-0.070678 0.016180 0.000057" rpy="1.570799 3.145506 0.546856" />
+            <geometry>
+                <box size="0.028633 0.034111 0.046500" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.094104 0.054670 0.055831" rpy="-3.006078 2.365219 2.309748" />
+            <geometry>
+                <cylinder length="0.042402744293213" radius="0.0097193717956543" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.088905 0.046118 0.048932" rpy="0.785270 3.141375 0.547097" />
+            <geometry>
+                <box size="0.028516 0.034007 0.046514" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.064426 0.005886 0.000057" rpy="-3.141566 3.141585 1.844424" />
+            <geometry>
+                <cylinder length="0.038001537322998" radius="0.009715810418129" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.094142 0.054658 -0.061727" rpy="-2.510504 3.645483 1.130377" />
+            <geometry>
+                <cylinder length="0.042403340339661" radius="0.0097194761037827" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.056791 -0.011001 -0.018442" rpy="1.933161 1.570807 2.240606" />
+            <geometry>
+                <box size="0.003001 0.036913 0.136036" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.095438 0.026562 0.035626" rpy="0.785269 3.141591 0.546860" />
+            <geometry>
+                <box size="0.003001 0.022008 0.063639" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.068532 0.042942 0.035626" rpy="0.785269 3.141610 0.546877" />
+            <geometry>
+                <box size="0.003001 0.022008 0.063639" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.059305 0.027786 -0.002943" rpy="-3.141587 3.141591 0.546857" />
+            <geometry>
+                <box size="0.003000 0.034000 0.044538" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.086211 0.011406 -0.002943" rpy="-3.141587 3.141591 0.546857" />
+            <geometry>
+                <box size="0.003001 0.034000 0.047692" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.068532 0.042942 -0.041511" rpy="-0.785260 3.141594 0.546858" />
+            <geometry>
+                <box size="0.003000 0.022008 0.063639" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.095438 0.026561 -0.041511" rpy="-0.785260 3.141595 0.546858" />
+            <geometry>
+                <box size="0.003000 0.022008 0.063639" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.056766 -0.011072 0.018558" rpy="0.859653 4.712381 -0.552404" />
+            <geometry>
+                <box size="0.003001 0.036762 0.136036" />
+            </geometry>
+        </collision>
+        <collision name="Thorax">
+            <origin xyz="-0.088905 0.046118 -0.054818" rpy="-0.785260 3.141811 0.547095" />
+            <geometry>
+                <box size="0.028515 0.034006 0.046514" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaBC3" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="1.3962634503841" lower="-1.7453292906284" velocity="1.0471975803375" />
+        <parent link="Thorax" />
+        <child link="LegThoraxRightLink1" />
+        <origin xyz="-0.093699 0.053942 0.056721" rpy="2.878107 2.392392 1.740291" />
+    </joint>
+    <link name="LegThoraxRightLink1">
+        <inertial>
+            <origin rpy="0.000224 3.141727 2.018782" xyz="0.004362 0.002122 0.003495" />
+            <inertia izz="2.7032945074644e-05" iyz="3.8403333722007e-06" ixx="5.2499231550432e-05" iyy="4.4062315572048e-05" ixz="-5.4987206415571e-10" ixy="3.052183779589e-10" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision name="Leg_Thorax_Right_Link1">
+            <origin xyz="-0.006349 -0.003017 0.022479" rpy="0.623842 4.712116 -0.176375" />
+            <geometry>
+                <box size="0.005001 0.022007 0.034966" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link1">
+            <origin xyz="0.003600 0.001752 -0.037269" rpy="0.652579 4.712126 -0.204610" />
+            <geometry>
+                <box size="0.028501 0.034012 0.046509" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link1">
+            <origin xyz="0.014414 0.006945 -0.037269" rpy="-1.569697 4.643776 -2.694967" />
+            <geometry>
+                <cylinder length="0.038004726171494" radius="0.0097468197345734" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link1">
+            <origin xyz="-0.003839 -0.001819 -0.020521" rpy="0.658512 4.712115 -0.211045" />
+            <geometry>
+                <box size="0.005001 0.022010 0.040499" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link1">
+            <origin xyz="-0.019847 -0.009502 0.000978" rpy="-3.141498 3.141808 -2.693865" />
+            <geometry>
+                <box size="0.005000 0.022010 0.038000" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaCF3" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.52359873056412" lower="-0.26179945468903" velocity="1.0471975803375" />
+        <parent link="LegThoraxRightLink1" />
+        <child link="LegThoraxRightLink2" />
+        <origin xyz="0.014475 0.006931 -0.037300" rpy="1.570718 2.861140 0.447701" />
+    </joint>
+    <link name="LegThoraxRightLink2">
+        <inertial>
+            <origin rpy="1.506905 4.701962 -2.165313" xyz="0.106023 -0.076525 -0.000165" />
+            <inertia izz="5.760234077472e-05" iyz="-5.2814768473165e-05" ixx="0.00063820550278356" iyy="0.00065748805962023" ixz="-8.7301147729515e-07" ixy="1.4787884216665e-07" />
+            <mass value="0.18000000715256" />
+        </inertial>
+        <collision name="Leg_Thorax_Right_Link2">
+            <origin xyz="0.067126 -0.046767 -0.000165" rpy="-3.141577 3.142587 0.710300" />
+            <geometry>
+                <cylinder length="0.038001090288162" radius="0.0032186880707741" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link2">
+            <origin xyz="0.014213 0.000627 0.020329" rpy="-1.038855 4.711420 -2.208036" />
+            <geometry>
+                <box size="0.003000 0.030394 0.054750" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link2">
+            <origin xyz="0.133136 -0.102288 -0.000160" rpy="-1.570796 3.142433 0.767021" />
+            <geometry>
+                <box size="0.028507 0.034011 0.046508" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link2">
+            <origin xyz="0.014189 0.000594 -0.020672" rpy="-1.032949 4.711417 -2.213943" />
+            <geometry>
+                <box size="0.003000 0.030394 0.054750" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link2">
+            <origin xyz="0.074599 -0.041580 -0.020674" rpy="1.404636 4.711413 -2.208500" />
+            <geometry>
+                <box size="0.003000 0.030003 0.122174" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link2">
+            <origin xyz="0.074623 -0.041547 0.020326" rpy="1.404420 4.711414 -2.208284" />
+            <geometry>
+                <box size="0.003000 0.030003 0.122174" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link2">
+            <origin xyz="0.116031 -0.084540 -0.000164" rpy="3.140554 3.141599 2.337616" />
+            <geometry>
+                <box size="0.002811 0.030003 0.044002" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link2">
+            <origin xyz="0.141496 -0.110961 -0.000158" rpy="0.000250 3.140591 -2.261246" />
+            <geometry>
+                <cylinder length="0.038006067276001" radius="0.0096724182367325" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaFT3" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="1.0471975803375" lower="-1.0471975803375" velocity="1.0471975803375" />
+        <parent link="LegThoraxRightLink2" />
+        <child link="LegThoraxRightLink3" />
+        <origin xyz="0.141892 -0.110781 -0.000037" rpy="0.000445 3.141419 -3.088028" />
+    </joint>
+    <link name="LegThoraxRightLink3">
+        <inertial>
+            <origin rpy="-3.118479 1.572086 2.451315" xyz="0.065815 -0.022592 0.000210" />
+            <inertia izz="5.1129607481889e-06" iyz="-7.3669146842038e-06" ixx="0.00011587605253547" iyy="0.00011576391463284" ixz="7.3196280500875e-09" ixy="3.5678509000922e-10" />
+            <mass value="0.034832794219255" />
+        </inertial>
+        <collision name="Leg_Thorax_Right_Link3">
+            <origin xyz="0.004002 0.004981 -0.020378" rpy="1.590681 1.572087 2.448134" />
+            <geometry>
+                <box size="0.003000 0.020001 0.033500" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link3">
+            <origin xyz="0.003961 0.005015 0.020622" rpy="1.592754 1.572068 2.450208" />
+            <geometry>
+                <box size="0.003000 0.020001 0.033500" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link3">
+            <origin xyz="0.080076 -0.030625 0.000232" rpy="1.572321 2.670293 0.858245" />
+            <geometry>
+                <cylinder length="0.18170228600502" radius="0.0069939307868481" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Right_Link3">
+            <origin xyz="0.014054 0.016636 0.000122" rpy="0.001275 3.141563 0.857403" />
+            <geometry>
+                <box size="0.003284 0.020000 0.044000" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Forcesensor3" type="fixed">
+        <axis xyz="0 0 1" />
+        <parent link="LegThoraxRightLink3" />
+        <child link="Tips3" />
+        <origin xyz="0.155579 -0.095546 0.000016" rpy="-3.118064 1.572087 2.451721" />
+    </joint>
+    <link name="Tips3">
+        <inertial>
+            <origin rpy="1.542054 1.570800 0.737640" xyz="-0.000346 -0.000337 -0.000224" />
+            <inertia izz="5.1028341083554e-07" iyz="0.0" ixx="5.1028341083554e-07" iyy="5.1028341083554e-07" ixz="0.0" ixy="0.0" />
+            <mass value="0.0081712091341615" />
+        </inertial>
+        <collision name="Tips3">
+            <origin xyz="-0.000346 -0.000337 -0.000224" rpy="1.542054 1.570800 0.737640" />
+            <geometry>
+                <sphere radius="0.012494893744588" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaBC0" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.34906587004662" lower="-0.69813171029091" velocity="1.0471975803375" />
+        <parent link="Thorax" />
+        <child link="LegThoraxLeftLink1" />
+        <origin xyz="-0.093339 0.053302 -0.063329" rpy="-2.878079 3.890788 1.740249" />
+    </joint>
+    <link name="LegThoraxLeftLink1">
+        <inertial>
+            <origin rpy="-0.000222 3.141454 2.018468" xyz="0.004351 0.002143 0.031058" />
+            <inertia izz="2.7032945074644e-05" iyz="3.8403333722007e-06" ixx="5.2499231550432e-05" iyy="4.4062315572048e-05" ixz="-5.4987206415571e-10" ixy="3.052183779589e-10" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision name="Leg_Thorax_Left_Link1">
+            <origin xyz="0.014397 0.006964 0.038293" rpy="1.571145 4.263299 -2.694196" />
+            <geometry>
+                <cylinder length="0.03800094127655" radius="0.0097468495368958" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link1">
+            <origin xyz="0.003582 0.001770 0.038298" rpy="-0.681279 1.571061 -0.233626" />
+            <geometry>
+                <box size="0.028500 0.034005 0.046504" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link1">
+            <origin xyz="-0.006367 -0.002999 -0.021450" rpy="-0.667682 1.571060 -0.220185" />
+            <geometry>
+                <box size="0.005000 0.022007 0.034967" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link1">
+            <origin xyz="-0.003860 -0.001801 0.021550" rpy="-0.684465 1.571066 -0.236466" />
+            <geometry>
+                <box size="0.005000 0.022008 0.040504" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link1">
+            <origin xyz="-0.019865 -0.009485 0.000050" rpy="3.141499 3.141389 -2.693836" />
+            <geometry>
+                <box size="0.005001 0.022013 0.048000" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaCF0" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.52359873056412" lower="-0.26179945468903" velocity="1.0471975803375" />
+        <parent link="LegThoraxLeftLink1" />
+        <child link="LegThoraxLeftLink2" />
+        <origin xyz="0.014398 0.006922 0.038244" rpy="-1.570544 1.937731 0.447497" />
+    </joint>
+    <link name="LegThoraxLeftLink2">
+        <inertial>
+            <origin rpy="-1.478051 1.580825 -0.652155" xyz="0.025052 0.034087 0.000092" />
+            <inertia izz="5.760234077472e-05" iyz="-5.2814768473165e-05" ixx="0.00063820550278356" iyy="0.00065748805962023" ixz="-8.7301147729515e-07" ixy="1.4787884216665e-07" />
+            <mass value="0.18000000715256" />
+        </inertial>
+        <collision name="Leg_Thorax_Left_Link2">
+            <origin xyz="0.047722 0.071104 -0.020473" rpy="1.622074 1.571354 2.302527" />
+            <geometry>
+                <box size="0.003000 0.030002 0.122175" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link2">
+            <origin xyz="0.122630 0.131695 0.000029" rpy="0.000143 3.142150 2.471284" />
+            <geometry>
+                <cylinder length="0.038004100322723" radius="0.0097183883190155" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link2">
+            <origin xyz="0.052253 0.063207 0.000032" rpy="-3.141430 3.142135 2.030932" />
+            <geometry>
+                <cylinder length="0.038000166416168" radius="0.0032320618629456" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link2">
+            <origin xyz="0.000477 0.014578 0.020533" rpy="0.919027 1.571351 2.297533" />
+            <geometry>
+                <box size="0.003000 0.030398 0.054740" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link2">
+            <origin xyz="0.000492 0.014561 -0.020467" rpy="0.916878 1.571353 2.295527" />
+            <geometry>
+                <box size="0.003001 0.030394 0.054743" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link2">
+            <origin xyz="0.094108 0.108665 0.000028" rpy="3.141012 3.141646 -2.461181" />
+            <geometry>
+                <box size="0.002803 0.030001 0.044000" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link2">
+            <origin xyz="0.113268 0.124174 0.000029" rpy="1.570597 3.141936 2.251384" />
+            <geometry>
+                <box size="0.028513 0.034017 0.046511" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link2">
+            <origin xyz="0.047707 0.071121 0.020527" rpy="1.621399 1.571348 2.301853" />
+            <geometry>
+                <box size="0.003000 0.030002 0.122174" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaFT0" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="1.0471975803375" lower="-1.0471975803375" velocity="1.0471975803375" />
+        <parent link="LegThoraxLeftLink2" />
+        <child link="LegThoraxLeftLink3" />
+        <origin xyz="0.122670 0.131737 -0.000009" rpy="-0.000564 3.141729 -2.241132" />
+    </joint>
+    <link name="LegThoraxLeftLink3">
+        <inertial>
+            <origin rpy="1.312937 4.712166 0.477868" xyz="0.039823 -0.057573 -0.000048" />
+            <inertia izz="5.1100411974814e-06" iyz="7.3390552426128e-06" ixx="0.00011588039732362" iyy="0.00011577173951848" ixz="2.4661095093183e-08" ixy="-1.451391113122e-09" />
+            <mass value="0.034834433346987" />
+        </inertial>
+        <collision name="Leg_Thorax_Left_Link3">
+            <origin xyz="0.046500 -0.072518 -0.000052" rpy="-1.571424 2.041782 0.219333" />
+            <geometry>
+                <cylinder length="0.18170356750488" radius="0.0069939792156219" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link3">
+            <origin xyz="0.006562 0.001397 0.020464" rpy="-0.386685 4.712156 0.606728" />
+            <geometry>
+                <box size="0.003000 0.020001 0.033503" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link3">
+            <origin xyz="0.006569 0.001402 -0.020536" rpy="-0.430649 4.712152 0.650692" />
+            <geometry>
+                <box size="0.003000 0.020001 0.033501" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Thorax_Left_Link3">
+            <origin xyz="0.021585 0.004758 -0.000032" rpy="3.141403 3.141377 0.219996" />
+            <geometry>
+                <box size="0.003284 0.020005 0.044002" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Forcesensor0" type="fixed">
+        <axis xyz="0 0 1" />
+        <parent link="LegThoraxLeftLink3" />
+        <child link="Tips0" />
+        <origin xyz="0.068244 -0.169435 -0.000008" rpy="1.057150 4.712143 0.733638" />
+    </joint>
+    <link name="Tips0">
+        <inertial>
+            <origin rpy="-1.591789 1.570817 -0.054334" xyz="-0.000029 0.000063 0.000024" />
+            <inertia izz="5.1026481258474e-07" iyz="0.0" ixx="5.1026481258474e-07" iyy="5.1026481258474e-07" ixz="0.0" ixy="0.0" />
+            <mass value="0.0081710303202271" />
+        </inertial>
+        <collision name="Tips0">
+            <origin xyz="-0.000029 0.000063 0.000024" rpy="-1.591789 1.570817 -0.054334" />
+            <geometry>
+                <sphere radius="0.012494802474976" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaBC5" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.52359879016876" lower="-0.52359879016876" velocity="1.0471975803375" />
+        <parent link="base_link" />
+        <child link="LegAbdomenRearRightLink1" />
+        <origin xyz="-0.075830 -0.059736 0.327817" rpy="2.572034 3.972547 -0.285554" />
+    </joint>
+    <link name="LegAbdomenRearRightLink1">
+        <inertial>
+            <origin rpy="3.141468 3.141310 -2.867234" xyz="-0.000088 0.000565 -0.028800" />
+            <inertia izz="2.7032945074644e-05" iyz="3.8403333722007e-06" ixx="5.2499231550432e-05" iyy="4.4062315572048e-05" ixz="-5.4987206415571e-10" ixy="3.052183779589e-10" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision name="Leg_Abdomen_RearRight_Link1">
+            <origin xyz="-0.001033 0.003917 -0.036038" rpy="-2.384703 4.712364 -2.053322" />
+            <geometry>
+                <box size="0.028500 0.034004 0.046503" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link1">
+            <origin xyz="-0.004283 0.015470 -0.036041" rpy="2.096742 4.712261 -1.822453" />
+            <geometry>
+                <cylinder length="0.038001298904419" radius="0.0097467601299286" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link1">
+            <origin xyz="-0.005907 0.021245 0.002212" rpy="0.000161 3.141617 1.845083" />
+            <geometry>
+                <box size="0.005001 0.022007 0.048004" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link1">
+            <origin xyz="-0.001100 0.004158 -0.019288" rpy="0.252112 4.712370 -1.548597" />
+            <geometry>
+                <box size="0.005000 0.022001 0.040501" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link1">
+            <origin xyz="-0.001850 0.006824 0.023712" rpy="0.559619 4.712370 -1.856103" />
+            <geometry>
+                <box size="0.005000 0.022001 0.034963" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaCF5" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.52359879016876" lower="-1.0471975803375" velocity="1.0471975803375" />
+        <parent link="LegAbdomenRearRightLink1" />
+        <child link="LegAbdomenRearRightLink2" />
+        <origin xyz="-0.004280 0.015405 -0.036056" rpy="-1.570969 3.055981 1.845401" />
+    </joint>
+    <link name="LegAbdomenRearRightLink2">
+        <inertial>
+            <origin rpy="-1.570492 3.142556 -1.870455" xyz="-0.124858 0.033692 0.000034" />
+            <inertia izz="6.0229770492285e-05" iyz="9.6158924203723e-08" ixx="0.00068489465771282" iyy="0.00066760998771" ixz="6.2579366187629e-05" ixy="-2.0991058265942e-08" />
+            <mass value="0.18299999833107" />
+        </inertial>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.161275 0.047570 0.000012" rpy="1.570903 3.141935 -2.008758" />
+            <geometry>
+                <box size="0.028501 0.034006 0.046504" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.172143 0.052659 0.000015" rpy="3.141490 3.142134 -1.596230" />
+            <geometry>
+                <cylinder length="0.038004398345947" radius="0.0097034871578217" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.035399 -0.021060 -0.000021" rpy="3.141081 3.141729 -0.223203" />
+            <geometry>
+                <cylinder length="0.038001239299774" radius="0.003463476896286" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.079821 0.019352 -0.000003" rpy="3.141081 3.141725 -0.223228" />
+            <geometry>
+                <cylinder length="0.038001239299774" radius="0.0034632980823517" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.013374 -0.005962 0.020483" rpy="0.623693 1.571077 -2.257726" />
+            <geometry>
+                <box size="0.003011 0.030395 0.054790" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.013376 -0.005946 -0.020517" rpy="0.623281 1.571077 -2.258139" />
+            <geometry>
+                <box size="0.003011 0.030395 0.054791" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.084900 0.011811 -0.020506" rpy="-0.970769 1.571174 -1.408810" />
+            <geometry>
+                <box size="0.003000 0.030009 0.122176" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.138862 0.037074 0.000007" rpy="3.141147 3.141917 -0.438307" />
+            <geometry>
+                <box size="0.003015 0.030007 0.044004" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link2">
+            <origin xyz="-0.084897 0.011796 0.020494" rpy="-0.984523 1.571180 -1.422563" />
+            <geometry>
+                <box size="0.003000 0.030010 0.122176" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaFT5" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.87266466021538" lower="-1.2217305004597" velocity="1.0471975803375" />
+        <parent link="LegAbdomenRearRightLink2" />
+        <child link="LegAbdomenRearRightLink3" />
+        <origin xyz="-0.172112 0.052719 0.000030" rpy="-0.000501 3.141578 0.450570" />
+    </joint>
+    <link name="LegAbdomenRearRightLink3">
+        <inertial>
+            <origin rpy="2.668641 1.571112 -0.980855" xyz="0.069496 -0.008483 0.000022" />
+            <inertia izz="5.1196464232152e-06" iyz="-7.377442165811e-06" ixx="0.00011591129427785" iyy="0.00011579839471594" ixz="-2.0819828371016e-08" ixy="3.3509589986352e-10" />
+            <mass value="0.034841045737267" />
+        </inertial>
+        <collision name="Leg_Abdomen_RearRight_Link3">
+            <origin xyz="0.003350 0.005898 0.020518" rpy="2.496562 4.711937 1.708130" />
+            <geometry>
+                <box size="0.003009 0.020002 0.033502" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link3">
+            <origin xyz="0.003349 0.005906 -0.020482" rpy="2.509552 4.712222 1.694969" />
+            <geometry>
+                <box size="0.003000 0.020003 0.033502" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link3">
+            <origin xyz="0.010833 0.019352 0.000020" rpy="-0.000127 3.141731 -2.078542" />
+            <geometry>
+                <box size="0.003284 0.020010 0.044004" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearRight_Link3">
+            <origin xyz="0.085110 -0.013440 0.000018" rpy="-1.570822 2.984388 1.063049" />
+            <geometry>
+                <cylinder length="0.18170094490051" radius="0.0069939754903316" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Forcesensor5" type="fixed">
+        <axis xyz="0 0 1" />
+        <parent link="LegAbdomenRearRightLink3" />
+        <child link="Tips5" />
+        <origin xyz="0.171859 -0.061745 -0.000012" rpy="1.379394 1.571223 0.900710" />
+    </joint>
+    <link name="Tips5">
+        <inertial>
+            <origin rpy="0.592738 1.599772 -1.574868" xyz="-0.000017 0.000033 0.000059" />
+            <inertia izz="5.0735046735656e-07" iyz="0.0" ixx="5.0735046735656e-07" iyy="5.0735046735656e-07" ixz="0.0" ixy="0.0" />
+            <mass value="0.0081429975107312" />
+        </inertial>
+        <collision name="Tips5">
+            <origin xyz="-0.000017 0.000033 0.000059" rpy="0.592738 1.599772 -1.574868" />
+            <geometry>
+                <sphere radius="0.012480497360229" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaBC2" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.52359879016876" lower="-0.52359879016876" velocity="1.0471975803375" />
+        <parent link="base_link" />
+        <child link="LegAbdomenRearLeftLink1" />
+        <origin xyz="-0.077825 0.056619 0.326344" rpy="0.558570 2.276811 -1.411648" />
+    </joint>
+    <link name="LegAbdomenRearLeftLink1">
+        <inertial>
+            <origin rpy="0.000319 3.141814 1.171951" xyz="0.006831 -0.002893 0.028884" />
+            <inertia izz="2.7032945074644e-05" iyz="3.8403333722007e-06" ixx="5.2499231550432e-05" iyy="4.4062315572048e-05" ixz="-5.4987206415571e-10" ixy="3.052183779589e-10" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision name="Leg_Abdomen_RearLeft_Link1">
+            <origin xyz="0.020214 -0.008531 -0.002127" rpy="-0.000136 3.141379 -0.398924" />
+            <geometry>
+                <box size="0.005000 0.022004 0.048000" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link1">
+            <origin xyz="0.014681 -0.006201 0.036125" rpy="-1.570986 2.288704 -0.399128" />
+            <geometry>
+                <cylinder length="0.038002192974091" radius="0.0097463876008987" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link1">
+            <origin xyz="0.002005 -0.000856 0.019368" rpy="-2.932471 1.571023 2.951813" />
+            <geometry>
+                <box size="0.005000 0.022001 0.036487" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link1">
+            <origin xyz="0.006413 -0.002713 -0.023631" rpy="-2.900996 1.571027 2.983297" />
+            <geometry>
+                <box size="0.005001 0.022001 0.034963" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link1">
+            <origin xyz="0.003619 -0.001538 0.036118" rpy="-2.895012 1.571015 2.989333" />
+            <geometry>
+                <box size="0.028500 0.034004 0.046503" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaCF2" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.52359879016876" lower="-1.0471975803375" velocity="1.0471975803375" />
+        <parent link="LegAbdomenRearLeftLink1" />
+        <child link="LegAbdomenRearLeftLink2" />
+        <origin xyz="0.014680 -0.006214 0.036059" rpy="-1.570532 2.263348 2.742821" />
+    </joint>
+    <link name="LegAbdomenRearLeftLink2">
+        <inertial>
+            <origin rpy="-1.570819 3.141018 2.062221" xyz="0.111686 0.065006 0.000004" />
+            <inertia izz="6.0229770492285e-05" iyz="9.6158924203723e-08" ixx="0.00068489465771282" iyy="0.00066760998771" ixz="6.2579366187629e-05" ixy="-2.0991058265942e-08" />
+            <mass value="0.18299999833107" />
+        </inertial>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.067958 0.052091 0.020496" rpy="-2.951642 4.712266 0.165104" />
+            <geometry>
+                <box size="0.003000 0.030027 0.122174" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.158293 0.085562 0.000008" rpy="-3.141490 3.141860 -2.517074" />
+            <geometry>
+                <cylinder length="0.038004219532013" radius="0.0097032189369202" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.009765 0.039920 -0.000011" rpy="-3.141362 3.141568 1.536249" />
+            <geometry>
+                <cylinder length="0.038000285625458" radius="0.003463089466095" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.069687 0.043179 -0.000004" rpy="-3.141319 3.141677 2.503005" />
+            <geometry>
+                <cylinder length="0.038001418113708" radius="0.0034637004137039" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.147041 0.081392 0.000007" rpy="-1.570512 3.141614 1.925634" />
+            <geometry>
+                <box size="0.028500 0.034007 0.046506" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.123833 0.072794 0.000003" rpy="-0.000030 3.141682 -2.786618" />
+            <geometry>
+                <box size="0.003005 0.030001 0.044000" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.005112 0.013607 -0.020512" rpy="-2.263484 4.711980 0.174860" />
+            <geometry>
+                <box size="0.003011 0.030395 0.054791" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.005107 0.013607 0.020488" rpy="-2.263945 4.711980 0.175318" />
+            <geometry>
+                <box size="0.003012 0.030395 0.054789" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link2">
+            <origin xyz="0.067963 0.052092 -0.020504" rpy="-2.916652 4.712265 0.130115" />
+            <geometry>
+                <box size="0.003000 0.030027 0.122174" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaFT2" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.87266466021538" lower="-1.2217305004597" velocity="1.0471975803375" />
+        <parent link="LegAbdomenRearLeftLink2" />
+        <child link="LegAbdomenRearLeftLink3" />
+        <origin xyz="0.158348 0.085601 0.000020" rpy="0.000036 3.141694 1.814531" />
+    </joint>
+    <link name="LegAbdomenRearLeftLink3">
+        <inertial>
+            <origin rpy="0.344025 1.571112 -2.734134" xyz="-0.063020 -0.030327 -0.000002" />
+            <inertia izz="5.1164826760089e-06" iyz="-7.3544077796331e-06" ixx="0.00011590825945282" iyy="0.00011579829153981" ixz="3.5356032003236e-08" ixy="4.538873108476e-09" />
+            <mass value="0.034840602427721" />
+        </inertial>
+        <collision name="Leg_Abdomen_RearLeft_Link3">
+            <origin xyz="0.000405 -0.006670 -0.020491" rpy="0.446235 1.571175 -1.060888" />
+            <geometry>
+                <box size="0.003009 0.020006 0.033503" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link3">
+            <origin xyz="0.000405 -0.006673 0.020509" rpy="3.064033 1.570919 -1.584937" />
+            <geometry>
+                <box size="0.003000 0.020000 0.033501" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link3">
+            <origin xyz="0.001381 -0.022032 0.000007" rpy="-0.000106 3.141472 1.634217" />
+            <geometry>
+                <box size="0.003284 0.020005 0.044002" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_RearLeft_Link3">
+            <origin xyz="-0.078834 -0.034597 0.000001" rpy="-1.570886 3.927155 -1.507347" />
+            <geometry>
+                <cylinder length="0.18170118331909" radius="0.0069940090179443" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Forcesensor2" type="fixed">
+        <axis xyz="0 0 1" />
+        <parent link="LegAbdomenRearLeftLink3" />
+        <child link="Tips2" />
+        <origin xyz="-0.177960 -0.040960 -0.000006" rpy="-1.609836 4.711654 1.703492" />
+    </joint>
+    <link name="Tips2">
+        <inertial>
+            <origin rpy="0.482853 1.601286 1.569078" xyz="0.000010 0.000067 0.000016" />
+            <inertia izz="5.0744742153306e-07" iyz="0.0" ixx="5.0744742153306e-07" iyy="5.0744742153306e-07" ixz="0.0" ixy="0.0" />
+            <mass value="0.008143930695951" />
+        </inertial>
+        <collision name="Tips2">
+            <origin xyz="0.000010 0.000067 0.000016" rpy="0.482853 1.601286 1.569078" />
+            <geometry>
+                <sphere radius="0.012480974197388" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaBC4" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.52359879016876" lower="-0.52359879016876" velocity="1.0471975803375" />
+        <parent link="base_link" />
+        <child link="LegAbdomenMidRightLink1" />
+        <origin xyz="0.031540 -0.044628 0.319708" rpy="2.401809 3.356364 0.717962" />
+    </joint>
+    <link name="LegAbdomenMidRightLink1">
+        <inertial>
+            <origin rpy="-3.141280 3.141449 2.368424" xyz="0.001039 -0.000259 -0.028831" />
+            <inertia izz="2.7032945074644e-05" iyz="3.8403333722007e-06" ixx="5.2499231550432e-05" iyy="4.4062315572048e-05" ixz="-5.4987206415571e-10" ixy="3.052183779589e-10" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision name="Leg_Abdomen_MidRight_Link1">
+            <origin xyz="0.004906 0.005060 0.023687" rpy="-0.460671 4.712040 1.258717" />
+            <geometry>
+                <box size="0.005013 0.022005 0.034967" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link1">
+            <origin xyz="0.011872 0.010841 -0.036072" rpy="-1.570700 4.276066 0.797957" />
+            <geometry>
+                <cylinder length="0.039901494979858" radius="0.0097337663173676" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link1">
+            <origin xyz="0.002797 0.002897 -0.036063" rpy="-0.460671 4.712040 1.258717" />
+            <geometry>
+                <box size="0.028522 0.034016 0.046518" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link1">
+            <origin xyz="0.000703 0.000750 -0.019314" rpy="-0.460671 4.712040 1.258717" />
+            <geometry>
+                <box size="0.005015 0.022008 0.034005" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link1">
+            <origin xyz="0.014842 0.015246 0.002188" rpy="-0.000126 3.141629 0.797799" />
+            <geometry>
+                <box size="0.006501 0.022007 0.048000" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaCF4" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.17453292012215" lower="-1.3962634503841" velocity="1.0471975803375" />
+        <parent link="LegAbdomenMidRightLink1" />
+        <child link="LegAbdomenMidRightLink2" />
+        <origin xyz="0.011118 0.011451 -0.036051" rpy="-1.570062 1.861257 0.798696" />
+    </joint>
+    <link name="LegAbdomenMidRightLink2">
+        <inertial>
+            <origin rpy="-1.570802 3.141221 -0.314918" xyz="-0.035748 -0.124387 -0.000017" />
+            <inertia izz="6.0229770492285e-05" iyz="9.6158924203723e-08" ixx="0.00068489465771282" iyy="0.00066760998771" ixz="6.2579366187629e-05" ixy="-2.0991058265942e-08" />
+            <mass value="0.18299999833107" />
+        </inertial>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="-0.021500 -0.079164 -0.000037" rpy="3.141510 3.141847 -1.095983" />
+            <geometry>
+                <cylinder length="0.037999510765076" radius="0.0034619718790054" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="0.020161 -0.035864 -0.000028" rpy="-3.141552 3.141495 0.595709" />
+            <geometry>
+                <cylinder length="0.038002133369446" radius="0.0034646689891815" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="-0.051894 -0.159922 -0.000056" rpy="-1.570844 3.141515 -0.464774" />
+            <geometry>
+                <box size="0.028516 0.034014 0.046510" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="-0.040797 -0.137799 -0.000051" rpy="-0.000039 3.141410 1.105873" />
+            <geometry>
+                <box size="0.003001 0.030006 0.044004" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="-0.014081 -0.084545 0.020461" rpy="0.685607 1.571060 -1.349966" />
+            <geometry>
+                <box size="0.003001 0.030020 0.122173" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="0.005598 -0.013514 -0.020522" rpy="-0.008513 1.571065 -1.346112" />
+            <geometry>
+                <box size="0.003000 0.030394 0.054790" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="-0.014083 -0.084534 -0.020539" rpy="0.684043 1.571061 -1.351531" />
+            <geometry>
+                <box size="0.003000 0.030019 0.122173" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="-0.057274 -0.170648 -0.000059" rpy="-3.141296 3.141538 -2.337215" />
+            <geometry>
+                <cylinder length="0.038004159927368" radius="0.0097029507160187" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link2">
+            <origin xyz="0.005600 -0.013524 0.020479" rpy="0.037859 1.571060 -1.299732" />
+            <geometry>
+                <box size="0.003001 0.030395 0.054791" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaFT4" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.87266466021538" lower="-1.2217305004597" velocity="1.0471975803375" />
+        <parent link="LegAbdomenMidRightLink2" />
+        <child link="LegAbdomenMidRightLink3" />
+        <origin xyz="-0.057337 -0.170623 -0.000990" rpy="-0.000147 3.141068 1.423245" />
+    </joint>
+    <link name="LegAbdomenMidRightLink3">
+        <inertial>
+            <origin rpy="-1.943168 4.712081 -2.277318" xyz="0.053885 -0.044721 -0.000938" />
+            <inertia izz="5.1125493897103e-06" iyz="7.3581661476704e-06" ixx="0.00011588453742704" iyy="0.00011577361284979" ixz="1.1992271696303e-08" ixy="-9.3471744231839e-10" />
+            <mass value="0.034835625439882" />
+        </inertial>
+        <collision name="Leg_Abdomen_MidRight_Link3">
+            <origin xyz="0.064333 -0.057323 -0.000939" rpy="-1.570867 1.727577 -2.649701" />
+            <geometry>
+                <cylinder length="0.18170189857483" radius="0.0069941058754921" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link3">
+            <origin xyz="0.005999 0.003144 -0.021433" rpy="-0.034276 4.712104 -2.615327" />
+            <geometry>
+                <box size="0.003000 0.020002 0.033501" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link3">
+            <origin xyz="0.006009 0.003150 0.019567" rpy="-0.033448 4.712100 -2.616155" />
+            <geometry>
+                <box size="0.003001 0.020003 0.033501" />
+            </geometry>
+        </collision>
+        <collision name="Leg_Abdomen_MidRight_Link3">
+            <origin xyz="0.019570 0.010416 -0.000937" rpy="3.141443 3.141306 -2.649689" />
+            <geometry>
+                <box size="0.003284 0.020006 0.044003" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Forcesensor4" type="fixed">
+        <axis xyz="0 0 1" />
+        <parent link="LegAbdomenMidRightLink3" />
+        <child link="Tips4" />
+        <origin xyz="0.111200 -0.144853 -0.000954" rpy="1.531175 1.571081 0.452284" />
+    </joint>
+    <link name="Tips4">
+        <inertial>
+            <origin rpy="0.455759 1.571049 -2.946360" xyz="-0.000017 0.000028 0.000062" />
+            <inertia izz="5.0736263706836e-07" iyz="0.0" ixx="5.0736263706836e-07" iyy="5.0736263706836e-07" ixz="0.0" ixy="0.0" />
+            <mass value="0.0081431148573756" />
+        </inertial>
+        <collision name="Tips4">
+            <origin xyz="-0.000017 0.000028 0.000062" rpy="0.455759 1.571049 -2.946360" />
+            <geometry>
+                <sphere radius="0.012480556964874" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaBC1" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.52359879016876" lower="-0.52359879016876" velocity="1.0471975803375" />
+        <parent link="base_link" />
+        <child link="dbAlphaL2link1" />
+        <origin xyz="0.030037 0.044837 0.318627" rpy="0.449154 2.480486 -1.798721" />
+    </joint>
+    <link name="dbAlphaL2link1">
+        <inertial>
+            <origin rpy="0.000111 3.141803 1.022478" xyz="0.006422 -0.003863 0.028876" />
+            <inertia izz="2.7032945074644e-05" iyz="3.8403333722007e-06" ixx="5.2499231550432e-05" iyy="4.4062315572048e-05" ixz="-5.4987206415571e-10" ixy="3.052183779589e-10" />
+            <mass value="0.10400000214577" />
+        </inertial>
+        <collision name="dbAlpha_L2_link1">
+            <origin xyz="0.006028 -0.003636 -0.023638" rpy="-1.075586 1.571038 1.517765" />
+            <geometry>
+                <box size="0.005001 0.022006 0.034966" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link1">
+            <origin xyz="0.013690 -0.008303 0.036113" rpy="-1.570801 2.750136 -0.548300" />
+            <geometry>
+                <cylinder length="0.038004994392395" radius="0.0097445547580719" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link1">
+            <origin xyz="0.003450 -0.002046 0.036111" rpy="-1.074403 1.571030 1.518948" />
+            <geometry>
+                <box size="0.028503 0.034012 0.046510" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link1">
+            <origin xyz="0.018811 -0.011440 -0.002136" rpy="0.000059 3.141444 -0.548483" />
+            <geometry>
+                <box size="0.005000 0.022006 0.047997" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link1">
+            <origin xyz="0.003665 -0.002180 0.019361" rpy="-0.760595 1.571030 1.832293" />
+            <geometry>
+                <box size="0.005001 0.022008 0.040504" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaCF1" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.17453292012215" lower="-1.3962634503841" velocity="1.0471975803375" />
+        <parent link="dbAlphaL2link1" />
+        <child link="dbAlphaL2link2" />
+        <origin xyz="0.013706 -0.008333 0.036052" rpy="1.570781 4.421812 -0.548284" />
+    </joint>
+    <link name="dbAlphaL2link2">
+        <inertial>
+            <origin rpy="-1.570791 3.141966 -0.314918" xyz="-0.035804 -0.124296 0.000013" />
+            <inertia izz="6.0229770492285e-05" iyz="9.6158924203723e-08" ixx="0.00068489465771282" iyy="0.00066760998771" ixz="6.2579366187629e-05" ixy="-2.0991058265942e-08" />
+            <mass value="0.18299999833107" />
+        </inertial>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="-0.014138 -0.084443 0.020504" rpy="-0.708859 4.712120 -1.326714" />
+            <geometry>
+                <box size="0.003000 0.030019 0.122173" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="-0.057330 -0.170557 0.000024" rpy="-3.141447 3.141575 -1.194816" />
+            <geometry>
+                <cylinder length="0.03800505399704" radius="0.0097036957740784" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="0.020016 -0.035819 -0.000007" rpy="-3.141102 3.141628 0.354071" />
+            <geometry>
+                <cylinder length="0.038001537322998" radius="0.0034639537334442" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="-0.021573 -0.079088 0.000002" rpy="3.141550 3.141401 -0.612392" />
+            <geometry>
+                <cylinder length="0.038001954555511" radius="0.0034641623497009" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="-0.051949 -0.159831 0.000021" rpy="-1.570747 3.141672 -0.464774" />
+            <geometry>
+                <box size="0.028516 0.034014 0.046510" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="-0.040852 -0.137708 0.000015" rpy="0.000165 3.141797 1.105864" />
+            <geometry>
+                <box size="0.003000 0.030001 0.043999" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="0.005545 -0.013433 -0.020514" rpy="-0.006456 4.712124 -1.331139" />
+            <geometry>
+                <box size="0.003000 0.030394 0.054790" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="0.005543 -0.013422 0.020486" rpy="-0.029793 4.712122 -1.307804" />
+            <geometry>
+                <box size="0.003001 0.030394 0.054790" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link2">
+            <origin xyz="-0.014136 -0.084453 -0.020496" rpy="-0.708578 4.712119 -1.326994" />
+            <geometry>
+                <box size="0.003000 0.030019 0.122173" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="dbAlphaFT1" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="4.0999999046326" upper="0.87266466021538" lower="-1.2217305004597" velocity="1.0471975803375" />
+        <parent link="dbAlphaL2link2" />
+        <child link="dbAlphaL2link3" />
+        <origin xyz="-0.057338 -0.170623 0.000041" rpy="-0.000108 3.141691 1.423217" />
+    </joint>
+    <link name="dbAlphaL2link3">
+        <inertial>
+            <origin rpy="-0.525657 1.571254 -1.604692" xyz="0.053773 -0.044727 0.000003" />
+            <inertia izz="5.1125989489996e-06" iyz="-7.3578894522084e-06" ixx="0.00011588189743997" iyy="0.000115770900838" ixz="2.2630524636847e-08" ixy="1.7205502916649e-09" />
+            <mass value="0.034835413098335" />
+        </inertial>
+        <collision name="dbAlpha_L2_link3">
+            <origin xyz="0.005893 0.003147 -0.020483" rpy="2.356703 1.571067 -0.292928" />
+            <geometry>
+                <box size="0.003000 0.020002 0.033502" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link3">
+            <origin xyz="0.005903 0.003145 0.020517" rpy="2.397164 1.571062 -0.252468" />
+            <geometry>
+                <box size="0.003000 0.020002 0.033501" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link3">
+            <origin xyz="0.019464 0.010415 0.000015" rpy="0.000375 3.141402 -2.649721" />
+            <geometry>
+                <box size="0.003284 0.020009 0.044004" />
+            </geometry>
+        </collision>
+        <collision name="dbAlpha_L2_link3">
+            <origin xyz="0.064219 -0.057329 -0.000000" rpy="-1.570628 2.984376 -2.649750" />
+            <geometry>
+                <cylinder length="0.18170112371445" radius="0.0069940909743309" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Forcesensor1" type="fixed">
+        <axis xyz="0 0 1" />
+        <parent link="dbAlphaL2link3" />
+        <child link="TipL2" />
+        <origin xyz="0.111196 -0.144856 -0.000038" rpy="-0.764063 4.712110 2.826731" />
+    </joint>
+    <link name="TipL2">
+        <inertial>
+            <origin rpy="1.178403 1.571012 2.937354" xyz="0.000018 0.000067 0.000011" />
+            <inertia izz="5.0735046735656e-07" iyz="0.0" ixx="5.0735046735656e-07" iyy="5.0735046735656e-07" ixz="0.0" ixy="0.0" />
+            <mass value="0.0081429975107312" />
+        </inertial>
+        <collision name="Tip_L2">
+            <origin xyz="0.000018 0.000067 0.000011" rpy="1.178403 1.571012 2.937354" />
+            <geometry>
+                <sphere radius="0.012480497360229" />
+            </geometry>
+        </collision>
+    </link>
+</robot>
