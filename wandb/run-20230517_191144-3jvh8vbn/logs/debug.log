@@ -1,0 +1,26 @@
+2023-05-17 19:11:44,756 INFO    MainThread:486438 [wandb_setup.py:_flush():76] Current SDK version is 0.15.2
+2023-05-17 19:11:44,756 INFO    MainThread:486438 [wandb_setup.py:_flush():76] Configure stats pid to 486438
+2023-05-17 19:11:44,756 INFO    MainThread:486438 [wandb_setup.py:_flush():76] Loading settings from /home/bile-itu/.config/wandb/settings
+2023-05-17 19:11:44,756 INFO    MainThread:486438 [wandb_setup.py:_flush():76] Loading settings from /home/bile-itu/git/dbAlpha_hebb/wandb/settings
+2023-05-17 19:11:44,756 INFO    MainThread:486438 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-17 19:11:44,757 INFO    MainThread:486438 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-17 19:11:44,757 INFO    MainThread:486438 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'training_dbalpha_FF.py', 'program': '/home/bile-itu/git/dbAlpha_hebb/training_dbalpha_FF.py'}
+2023-05-17 19:11:44,757 INFO    MainThread:486438 [wandb_init.py:_log_setup():507] Logging user logs to /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230517_191144-3jvh8vbn/logs/debug.log
+2023-05-17 19:11:44,757 INFO    MainThread:486438 [wandb_init.py:_log_setup():508] Logging internal logs to /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230517_191144-3jvh8vbn/logs/debug-internal.log
+2023-05-17 19:11:44,758 INFO    MainThread:486438 [wandb_init.py:init():547] calling init triggers
+2023-05-17 19:11:44,758 INFO    MainThread:486438 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'Device': {'CPU_NUM': 16, 'TASK_PER_IND': 1}, 'ENV': {'NAME': 'scene_dbAlpha_test', 'HEADLESS': True}, 'ES_params': {'POPSIZE': 500, 'EPISODE_LENGTH': 200, 'REWARD_FUNC': {'NAME': 'abs_x_D_Pen_Orient', 'ORIENTATION_WEIGHT': 1.0, 'DISTANCE_WEIGHT': 2.0}, 'rank_fitness': True, 'antithetic': True, 'learning_rate': 0.1, 'learning_rate_decay': 0.9999, 'sigma_init': 1, 'sigma_decay': 0.999, 'learning_rate_limit': 0.001, 'sigma_limit': 0.01}, 'Train_params': {'EPOCH': 501, 'EVAL_EVERY': 2, 'SAVE_EVERY': 100, 'USE_TRAIN_WEIGHT': True}, 'Model': {'FEEDFORWARD': {'input': {'J_pos': 18, 'Orient': 3}, 'output': {'J_pos': 18}, 'ARCHITECTURE': {'name': 'FeedForward', 'size': [21, 128, 64, 18]}}, 'HEBB': {'input': {'J_pos': 18, 'Orient': 3}, 'output': {'J_pos': 18}, 'ARCHITECTURE': {'name': 'hebb', 'size': [21, 64, 32, 18]}}}, 'Wandb_log': {'use_WanDB': True, 'project_name': 'dbAlpha_wandb_log'}}
+2023-05-17 19:11:44,758 INFO    MainThread:486438 [wandb_init.py:init():596] starting backend
+2023-05-17 19:11:44,759 INFO    MainThread:486438 [wandb_init.py:init():600] setting up manager
+2023-05-17 19:11:44,764 INFO    MainThread:486438 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-17 19:11:44,771 INFO    MainThread:486438 [wandb_init.py:init():606] backend started and connected
+2023-05-17 19:11:44,782 INFO    MainThread:486438 [wandb_init.py:init():700] updated telemetry
+2023-05-17 19:11:44,793 INFO    MainThread:486438 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2023-05-17 19:11:45,264 INFO    MainThread:486438 [wandb_run.py:_on_init():2177] communicating current version
+2023-05-17 19:11:45,426 INFO    MainThread:486438 [wandb_run.py:_on_init():2186] got version response 
+2023-05-17 19:11:45,427 INFO    MainThread:486438 [wandb_init.py:init():787] starting run threads in backend
+2023-05-17 19:11:45,479 INFO    MainThread:486438 [wandb_run.py:_console_start():2158] atexit reg
+2023-05-17 19:11:45,480 INFO    MainThread:486438 [wandb_run.py:_redirect():2013] redirect: SettingsConsole.WRAP_RAW
+2023-05-17 19:11:45,480 INFO    MainThread:486438 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2023-05-17 19:11:45,480 INFO    MainThread:486438 [wandb_run.py:_redirect():2103] Redirects installed.
+2023-05-17 19:11:45,481 INFO    MainThread:486438 [wandb_init.py:init():829] run started, returning control to user process

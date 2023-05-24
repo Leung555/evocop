@@ -1,0 +1,31 @@
+CPU_num:  16
+POPSIZE:  2
+EPISODE_LENGTH:  200
+REWARD_FUNCTION:  abs_x_D_Pen_Orient
+ARCHITECTURE_NAME:  FeedForward
+ARCHITECTURE_size:  [21, 128, 64, 18]
+ENV_NAME:  scene_dbAlpha_test
+initial_time 357956.765754006
+trainable parameters:  12032
+start_time 357956.768655468
+epoch 0 mean -14.975891795754407 best -12.40372420847413
+running time per epoch:  3.3701103740022518
+start_time 357960.141753099
+epoch 1 mean -17.588378401100613 best -17.42608398795125
+running time per epoch:  3.3639338000211865
+start_time 357963.506176657
+epoch 2 mean -8.623925107717495 best -1.8833973467350011
+running time per epoch:  3.326008590986021
+start_time 357966.832439078
+Traceback (most recent call last):
+  File "/home/bile-itu/git/dbAlpha_hebb/training_dbalpha_FF.py", line 170, in <module>
+    with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 649, in __exit__
+    self.shutdown(wait=True)
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 775, in shutdown
+    self._executor_manager_thread.join()
+  File "/usr/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt

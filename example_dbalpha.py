@@ -203,6 +203,8 @@ for run in runs:
                 # # print("joint_angles: ", joint_angles)
                 robot_position = agent.get_position()
                 robot_orient = agent.get_quaternion()
+                robot_leg_torq = agent.get_leg_joint_forces()
+                print("robot_leg_torq: ", robot_leg_torq)
                 # robot_quartenion_series[counter] = robot_orient
                 x = robot_orient[0]
                 y = robot_orient[1]

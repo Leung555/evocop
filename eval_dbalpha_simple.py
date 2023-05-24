@@ -72,7 +72,7 @@ TASK_PER_IND = configs['Device']['TASK_PER_IND']
 
 # ES parameters configuration
 POPSIZE             = configs['ES_params']['POPSIZE']
-EPISODE_LENGTH      = 500
+EPISODE_LENGTH      = 1000
 REWARD_FUNCTION     = configs['ES_params']['REWARD_FUNC']
 RANK_FITNESS        = configs['ES_params']['rank_fitness']
 ANTITHETIC          = configs['ES_params']['antithetic']
@@ -95,7 +95,7 @@ ARCHITECTURE = configs['Model']['FEEDFORWARD']['ARCHITECTURE']['size']
 ENV_NAME = configs['ENV']['NAME']
 
 # WanDB Log
-use_Wandb = configs['Wandb_log']['use_WanDB']
+use_Wandb = False
 config_wandb = configs
 
 if use_Wandb:
@@ -145,7 +145,7 @@ for run in runs:
     best_sol_curve = np.zeros(EPOCHS)
     eval_curve = np.zeros(EPOCHS)
 
-    for i, file_name in enumerate(res[0:1]):
+    for i, file_name in enumerate(res[1:2]):
         print('file_name: ', file_name)
         trained_data = pickle.load(open('./data/model/'+file_name, 'rb'))
         open_es_data = trained_data[0]
@@ -156,7 +156,7 @@ for run in runs:
         
     for epoch in range(EPOCHS):
         start_time = timeit.default_timer()
-        print("start_time", start_time)
+        # print("start_time", start_time)
 
         # solutions = solver.ask()
 

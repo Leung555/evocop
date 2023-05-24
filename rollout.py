@@ -4,10 +4,13 @@ import numpy as np
 from hebbian_neural_net import HebbianNet
 from os.path import dirname, join, abspath
 from dbAlphaEnv import dbAlphaEnv
+import yaml
+
+
 
 def fitness(net: HebbianNet, env_name: str, 
             episode_length: int, reward_function: str) -> float:
-    # print(env_name)
+
     env = dbAlphaEnv(env_name)
     env.start()
     # print('---start simulation---')
@@ -17,6 +20,8 @@ def fitness(net: HebbianNet, env_name: str,
     counter = 0
     tilt_penalty = 0
     tilt_lim_rad = 0.35 # (-20,+20) degrees
+    dist_weight = 5
+    orientation_weight = 1
 
     while not done:
         # print("step: ", counter)
@@ -44,7 +49,7 @@ def fitness(net: HebbianNet, env_name: str,
             tilt_penalty -= 0.1
 
         counter += 1
-    r_tot += robot_position[0]+tilt_penalty # y axis distance
+    r_tot += robot_position[0]*dist_weight+tilt_penalty*orientation_weight # y axis distance
     
     # env.stop_simulation()
     env.shutdown()

@@ -163,7 +163,7 @@ for run in runs:
 
     for epoch in range(EPOCHS):
         start_time = timeit.default_timer()
-        print("start_time", start_time)
+        # print("start_time", start_time)
 
         solutions = solver.ask()
 

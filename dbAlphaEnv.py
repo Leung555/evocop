@@ -42,6 +42,7 @@ class dbAlphaEnv(object):
     def _get_state(self):
         # Return state containing arm joint angles position
         return np.concatenate([self.agent.get_leg_joint_positions(),
+                               self.agent.get_leg_joint_forces(),
                                self.get_robot_euler()])
     
         # This code includes joint velocities

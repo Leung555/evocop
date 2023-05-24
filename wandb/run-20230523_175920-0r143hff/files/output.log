@@ -1,0 +1,21 @@
+CPU_num:  12
+POPSIZE:  500
+EPISODE_LENGTH:  200
+REWARD_FUNCTION:  {'NAME': 'abs_x_D_Pen_Orient', 'ORIENTATION_WEIGHT': 1.0, 'DISTANCE_WEIGHT': 2.0}
+ARCHITECTURE_NAME:  hebb
+ARCHITECTURE_size:  [39, 128, 64, 18]
+ENV_NAME:  scene_dbAlpha_test
+initial_time 28091.612497854
+trainable parameters:  71680
+Traceback (most recent call last):
+  File "/home/bile-itu/git/dbAlpha_hebb/training_dbalpha.py", line 170, in <module>
+    with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 649, in __exit__
+    self.shutdown(wait=True)
+  File "/usr/lib/python3.10/concurrent/futures/process.py", line 775, in shutdown
+    self._executor_manager_thread.join()
+  File "/usr/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt
