@@ -1,0 +1,27 @@
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_setup.py:_flush():76] Current SDK version is 0.15.2
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_setup.py:_flush():76] Configure stats pid to 1908931
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_setup.py:_flush():76] Loading settings from /home/bile-itu/.config/wandb/settings
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_setup.py:_flush():76] Loading settings from /home/bile-itu/git/dbAlpha_hebb/wandb/settings
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'training_dbalpha_FF.py', 'program': '/home/bile-itu/git/dbAlpha_hebb/training_dbalpha_FF.py'}
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_init.py:_log_setup():507] Logging user logs to /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230526_212411-hhwzf404/logs/debug.log
+2023-05-26 21:24:11,805 INFO    MainThread:1908931 [wandb_init.py:_log_setup():508] Logging internal logs to /home/bile-itu/git/dbAlpha_hebb/wandb/run-20230526_212411-hhwzf404/logs/debug-internal.log
+2023-05-26 21:24:11,806 INFO    MainThread:1908931 [wandb_init.py:init():547] calling init triggers
+2023-05-26 21:24:11,806 INFO    MainThread:1908931 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'Device': {'CPU_NUM': 12, 'TASK_PER_IND': 1}, 'ENV': {'NAME': 'scene_dbAlpha_test_60', 'HEADLESS': True}, 'ES_params': {'POPSIZE': 500, 'EPISODE_LENGTH': 200, 'REWARD_FUNC': {'NAME': 'abs_x_D_Pen_Orient', 'ORIENTATION_WEIGHT': 1.0, 'DISTANCE_WEIGHT': 2.0}, 'rank_fitness': True, 'antithetic': True, 'learning_rate': 0.1, 'learning_rate_decay': 0.9999, 'sigma_init': 1, 'sigma_decay': 0.999, 'learning_rate_limit': 0.001, 'sigma_limit': 0.01}, 'Train_params': {'EPOCH': 501, 'EVAL_EVERY': 2, 'SAVE_EVERY': 100, 'USE_TRAIN_WEIGHT': False}, 'Model': {'FEEDFORWARD': {'input': {'J_pos': 18, 'J_torq': 18, 'Orient': 3}, 'output': {'J_pos': 18}, 'ARCHITECTURE': {'name': 'FeedForward', 'size': [39, 128, 64, 18]}}, 'HEBB': {'input': {'J_pos': 18, 'J_torq': 18, 'Orient': 3}, 'output': {'J_pos': 18}, 'ARCHITECTURE': {'name': 'hebb', 'size': [39, 128, 64, 18]}}}, 'Wandb_log': {'use_WanDB': True, 'project_name': 'dbAlpha_wandb_log'}}
+2023-05-26 21:24:11,806 INFO    MainThread:1908931 [wandb_init.py:init():596] starting backend
+2023-05-26 21:24:11,806 INFO    MainThread:1908931 [wandb_init.py:init():600] setting up manager
+2023-05-26 21:24:11,808 INFO    MainThread:1908931 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-26 21:24:11,809 INFO    MainThread:1908931 [wandb_init.py:init():606] backend started and connected
+2023-05-26 21:24:11,811 INFO    MainThread:1908931 [wandb_init.py:init():700] updated telemetry
+2023-05-26 21:24:11,815 INFO    MainThread:1908931 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2023-05-26 21:24:12,286 INFO    MainThread:1908931 [wandb_run.py:_on_init():2177] communicating current version
+2023-05-26 21:24:12,425 INFO    MainThread:1908931 [wandb_run.py:_on_init():2186] got version response upgrade_message: "wandb version 0.15.3 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-05-26 21:24:12,425 INFO    MainThread:1908931 [wandb_init.py:init():787] starting run threads in backend
+2023-05-26 21:24:12,456 INFO    MainThread:1908931 [wandb_run.py:_console_start():2158] atexit reg
+2023-05-26 21:24:12,456 INFO    MainThread:1908931 [wandb_run.py:_redirect():2013] redirect: SettingsConsole.WRAP_RAW
+2023-05-26 21:24:12,456 INFO    MainThread:1908931 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2023-05-26 21:24:12,457 INFO    MainThread:1908931 [wandb_run.py:_redirect():2103] Redirects installed.
+2023-05-26 21:24:12,457 INFO    MainThread:1908931 [wandb_init.py:init():829] run started, returning control to user process

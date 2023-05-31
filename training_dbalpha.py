@@ -48,6 +48,7 @@ from multiprocessing import Pool
 
 # Lib for Evolutional strategy algorithm
 from hebbian_neural_net import HebbianNet
+from feedforward_neural_net import FeedForwardNet
 from ES_classes import OpenES
 from rollout import fitness
 
@@ -87,11 +88,11 @@ SIGMA_LIMIT         = configs['ES_params']['sigma_limit']
 EPOCHS = configs['Train_params']['EPOCH']
 EVAL_EVERY = configs['Train_params']['EVAL_EVERY']
 SAVE_EVERY = configs['Train_params']['SAVE_EVERY']
-USE_TRAIN_WEIGHT = configs['Train_params']['USE_TRAIN_WEIGHT']
+USE_TRAIN_WEIGHT = configs['Model']['USE_TRAIN_WEIGHT']
 
 # Model
-ARCHITECTURE_NAME = configs['Model']['HEBB']['ARCHITECTURE']['name']
-ARCHITECTURE = configs['Model']['HEBB']['ARCHITECTURE']['size']
+ARCHITECTURE_NAME = configs['Model']['TYPE']
+ARCHITECTURE = configs['ARCHITECTURE']['size']
 
 # scene file destination
 ENV_NAME = configs['ENV']['NAME']
@@ -118,17 +119,22 @@ print("initial_time", initial_time)
 runs = ['d_']
 for run in runs:
 
+    # Initialize Selected Model
+    if ARCHITECTURE_NAME == 'FEEDFORWARD':
+        dir_path = './data/model/FF/'
+        init_net = FeedForwardNet(ARCHITECTURE)
+    elif ARCHITECTURE_NAME == 'HEBBIAN':
+        dir_path = './data/model/HEBB/'
+        init_net = HebbianNet(ARCHITECTURE)
+
     # Using weight result from previous training
     if USE_TRAIN_WEIGHT:
-        dir_path = './data/model/'
         res = listdir(dir_path)
-        trained_data = pickle.load(open('./data/model/'+res[-1], 'rb'))
+        trained_data = pickle.load(open(dir_path+res[-1], 'rb'))
         open_es_data = trained_data[0]
         init_params = open_es_data.mu
-        init_net = HebbianNet(ARCHITECTURE)
         init_net.set_params(init_params)
     else:
-        init_net = HebbianNet(ARCHITECTURE)
         init_params = init_net.get_params()
 
     print('trainable parameters: ', len(init_params))
@@ -209,7 +215,7 @@ for run in runs:
                 copy.deepcopy(init_net),
                 pop_mean_curve,
                 best_sol_curve,
-                ), open('data/model/Hebb'+str(run)+'_' + str(len(init_params)) + str(epoch) + '_' + str(pop_mean_curve[epoch]) + '.pickle', 'wb'))
+                ), open(dir_path+str(run)+'_' + str(len(init_params)) + str(epoch) + '_' + str(pop_mean_curve[epoch]) + '.pickle', 'wb'))
         
         stop_time = timeit.default_timer()
         print("running time per epoch: ", stop_time-start_time)

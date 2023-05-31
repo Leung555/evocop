@@ -72,7 +72,7 @@ TASK_PER_IND = configs['Device']['TASK_PER_IND']
 
 # ES parameters configuration
 POPSIZE             = configs['ES_params']['POPSIZE']
-EPISODE_LENGTH      = 1000
+EPISODE_LENGTH      = 500
 REWARD_FUNCTION     = configs['ES_params']['REWARD_FUNC']
 RANK_FITNESS        = configs['ES_params']['rank_fitness']
 ANTITHETIC          = configs['ES_params']['antithetic']
@@ -145,7 +145,7 @@ for run in runs:
     best_sol_curve = np.zeros(EPOCHS)
     eval_curve = np.zeros(EPOCHS)
 
-    for i, file_name in enumerate(res[2:3]):
+    for i, file_name in enumerate(res):
         print('file_name: ', file_name)
         trained_data = pickle.load(open('./data/model/'+file_name, 'rb'))
         open_es_data = trained_data[0]
