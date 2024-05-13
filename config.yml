@@ -8,12 +8,12 @@ Model:
 
 # WanDB Data Logging
 Wandb_log:
-  use_WanDB: True # workstation (True) # <------------
+  use_WanDB: False # workstation (True) # <------------
   project_name: 'dbAlpha_wandb_log'
 
 # CPU
 Device:
-  CPU_NUM: 12 # workstation (used 16, 32 failed), DELL 8
+  CPU_NUM: 8 # workstation (used 16, 32 failed), DELL 8
   TASK_PER_IND: 1
   
 # Simulation Environments
@@ -40,7 +40,7 @@ ES_params:
 
 # Training Params
 Train_params:
-  EPOCH: 501 # workstation (501)
+  EPOCH: 5 # workstation (501)
   EVAL_EVERY: 2
   SAVE_EVERY: 100 # workstation (100)
 

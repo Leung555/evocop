@@ -49,6 +49,7 @@ from multiprocessing import Pool
 # Lib for Evolutional strategy algorithm
 from hebbian_neural_net import HebbianNet
 from feedforward_neural_net import FeedForwardNet
+from rbf_neural_net import RBFNet
 from ES_classes import OpenES
 from rollout import fitness
 
@@ -126,6 +127,9 @@ for run in runs:
     elif ARCHITECTURE_NAME == 'HEBBIAN':
         dir_path = './data/model/HEBB/'
         init_net = HebbianNet(ARCHITECTURE)
+    elif ARCHITECTURE_NAME == 'RBF':
+        dir_path = './data/model/RBF/'
+        init_net = RBFNet([20, 18])
 
     # Using weight result from previous training
     if USE_TRAIN_WEIGHT:
@@ -157,8 +161,8 @@ for run in runs:
     def worker_fn(params):
         mean = 0
         for epi in range(TASK_PER_IND):
-            net = HebbianNet(ARCHITECTURE)
-            net.set_params(params)
+            net = FeedForwardNet(ARCHITECTURE)
+            init_net.set_params(params)
             mean += fitness(net, ENV_NAME, EPISODE_LENGTH, REWARD_FUNCTION) 
         return mean/TASK_PER_IND
     

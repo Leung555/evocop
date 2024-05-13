@@ -99,9 +99,9 @@ EPISODE_LENGTH = 50
 # PROCESSES = 5
 
 # ARCHITECTURE
-inp_size = 18 # joint angles (18 joints)
-action_size = 18 # joint angles (18 joints)
-hidden_neuron_num1 = 2
+inp_size = 2 # joint angles (18 joints)
+action_size = 1 # joint angles (18 joints)
+hidden_neuron_num1 = 4
 hidden_neuron_num2 = 2
 
 ARCHITECTURE = [inp_size, 
