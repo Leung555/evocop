@@ -150,6 +150,7 @@ for run in runs:
 
     init_net = CPGNet()
     init_params = init_net.get_params()
+    print('init_params: ', init_params)
 
     solver = OpenES(len(init_params),
                     popsize=POPSIZE,
@@ -182,7 +183,7 @@ for run in runs:
 
         solutions = solver.ask()
         print('TEST')
-        print(solutions.shape)
+        print(solutions)
 
         with concurrent.futures.ProcessPoolExecutor(cpus) as executor:
             fitlist = executor.map(worker_fn, [params for params in solutions])

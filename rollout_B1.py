@@ -19,6 +19,7 @@ def fitness(net: HebbianNet, env_name: str,
     r_tot = 0
     counter = 0
     tilt_penalty = 0
+    Ypos_penalty = 0
     tilt_lim_rad = 0.35 # (-20,+20) degrees
     dist_weight = 1
     orientation_weight = 1
@@ -40,16 +41,20 @@ def fitness(net: HebbianNet, env_name: str,
         yaw     = robot_euler[2]      
         # print("action: ", action)
         # print("robot_pos: ", robot_position[0])
+        # print("robot_orient: ", [roll, pitch, yaw])
 
         # obs, r, done, _ = env.step(action)
         r, obs = env.step(action)
         # r_tot += r
 
-        if abs(roll) > tilt_lim_rad or abs(pitch) > tilt_lim_rad:
-            tilt_penalty -= 0.1
+        if abs(roll) > 0.1 or abs(pitch) > 0.1 or abs(yaw) > 0.1:
+            tilt_penalty -= 0.01
+
+        Ypos_penalty -= abs(robot_position[1])
 
         counter += 1
-    r_tot += robot_position[0]*dist_weight#+tilt_penalty*orientation_weight # y axis distance
+    r_tot += 2*robot_position[0]+0.1*Ypos_penalty+0.1*tilt_penalty # y axis distance
+    print("rewards: ", [robot_position[0], Ypos_penalty, tilt_penalty])
     
     # env.stop_simulation()
     env.shutdown()

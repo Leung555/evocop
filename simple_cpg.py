@@ -42,14 +42,15 @@ class CPGNet:
         # hip joint
         self.h_g = 1.0
         # thigh joint
-        self.Ft_g = 0.3
-        self.Rt_g = 0.3
+        self.Ft_g = 0.1
+        self.Rt_g = 0.1
         # knee joint
         self.Fk_g = 0.1
         self.Rk_g = 0.1  
         self.params = [self.h_b, self.Ft_b, self.Rt_b, self.Fk_b, self.Rk_b, 
                        self.h_g, self.Ft_g, self.Rt_g, self.Fk_g, self.Rk_g]
-    
+        # self.params = np.random.uniform(-1, 1, 10)
+        # self.set_params(self.params)
     
         cpg_delay = 100
         self.d1 = deque([0]*cpg_delay)
@@ -86,16 +87,17 @@ class CPGNet:
         #Joint Command
         jointPosTarget = [0]*self.jointNum
 
+        # command to hip joint
         for i in range(0, 12, 3):
-            #jointPosTarget[i] = self.h_b
-            if i == 0 : # FL thigh
-                jointPosTarget[i] = o1*self.Ft_g+self.h_b
-            if i == 9: # RL thigh
-                jointPosTarget[i] = o1*self.Rt_g+self.h_b
-            if i == 3: # RR thigh
-                jointPosTarget[i] = -o1_d*self.Rt_g+self.h_b
-            if i == 6: # FR thigh
-                jointPosTarget[i] = -o1_d*self.Ft_g+self.h_b
+            jointPosTarget[i] = self.h_b
+            # if i == 0 : # FL thigh
+            #     jointPosTarget[i] = o1*self.Ft_g+self.h_b
+            # if i == 9: # RL thigh
+            #     jointPosTarget[i] = o1*self.Rt_g+self.h_b
+            # if i == 3: # RR thigh
+            #     jointPosTarget[i] = o1_d*self.Rt_g+self.h_b
+            # if i == 6: # FR thigh
+            #     jointPosTarget[i] = o1_d*self.Ft_g+self.h_b
             
         # command to thight joint
         for i in range(1, 12, 3):

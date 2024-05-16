@@ -29,7 +29,7 @@ class B1Env(object):
 
     def __init__(self):
         self.pr = PyRep()
-        self.pr.launch(SCENE_FILE, headless=False)
+        self.pr.launch(SCENE_FILE, headless=True)
         self.pr.start()
         self.agent = B1()
         self.orientation = self.get_robot_euler()
